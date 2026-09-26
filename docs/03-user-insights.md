@@ -58,11 +58,15 @@
 
 ### 3.2 思维导图到底有没有用？
 
-- **总体有效，而且自己画强于看别人的图**【强】：[Schroeder et al. 2018](https://doi.org/10.1007/s10648-017-9403-9)（*Educational Psychology Review* 30:431–455，2017 年在线发表）元分析（142 个独立效应量、n=11,814）总体 g=0.58；**自己构建 g=0.72，研读现成的图 g=0.43**（[摘要](https://api.ies.ed.gov/eric/?search=Schroeder%20Nesbit%20concept%20maps%20meta-analysis)，2026-09 核实）。注意：该元分析研究的是**概念图 / 知识图**（连线带关系词），不是 Buzan 式思维导图。另见 [Nesbit & Adesope 2006](https://doi.org/10.3102/00346543076003413)（55 项研究、5,818 人）。
-- **但并非最优策略**【强】：与边看材料边画概念图相比，**提取练习**带来更多有意义的学习（[Karpicke & Blunt 2011, Science](https://doi.org/10.1126/science.1199327)；WWC 复核：一周后正确率提取练习 67%、概念图 45%、重复阅读 49%，[源](https://api.ies.ed.gov/eric/?search=Karpicke%20Blunt%20retrieval%20practice%20elaborative%20studying%20concept%20mapping)）。**"凭记忆画图"能同时获得提取练习的好处**：合上材料凭记忆画概念图，与凭记忆写段落效果相当，都优于再读一遍（一周后测试，Blunt & Karpicke 2014，[源](https://doi.org/10.1037/a0035934)）——原"(待核实)"已解决。
+- **总体有效，而且自己画强于看别人的图**【强】：[Schroeder et al. 2018](https://doi.org/10.1007/s10648-017-9403-9)（*Educational Psychology Review* 30:431–455，2017 年在线发表）元分析（142 个独立效应量、n=11,814）总体 g=0.58；**自己构建 g=0.72，研读现成的图 g=0.43**（[ERIC 摘要](https://eric.ed.gov/?id=EJ1179084)，2026-09 核实）。注意：该元分析研究的是**概念图 / 知识图**（连线带关系词），不是 Buzan 式思维导图。另见 [Nesbit & Adesope 2006](https://doi.org/10.3102/00346543076003413)（55 项研究、5,818 人）。
+- **但并非最优策略**【强】：与边看材料边画概念图相比，**提取练习**带来更多有意义的学习（[Karpicke & Blunt 2011, Science](https://doi.org/10.1126/science.1199327)；WWC 复核：最终测试平均正确率提取练习 67%、边看边画概念图 45%、重复阅读 49%、只读一遍 27%，[源](https://eric.ed.gov/?id=ED521113)）。**"凭记忆画图"能同时获得提取练习的好处**：合上材料凭记忆画概念图，与凭记忆写段落效果相当，都优于再读一遍（一周后测试，Blunt & Karpicke 2014，[源](https://doi.org/10.1037/a0035934)）——原"(待核实)"已解决。
 - **Buzan 式思维导图的证据更弱**【中】：医学生 50 人，一周后导图组的事实回忆比自选学习方法组高约 10%，但 95% 置信区间为 −1% 至 22%（不显著）；导图组的学习动机更低，若动机相当，差距估计为 15%（[Farrand et al. 2002](https://doi.org/10.1046/j.1365-2923.2002.01205.x)）。原记为"导图组提高约 10%，自选方法组约 6%"，摘要中无"6%"，2026-09 更正。
 - **图的类型决定用途**：思维导图是放射状的自由联想；概念图的连线上写着关系词，每条"节点—关系词—节点"就是一个命题；论证图由主张、理由、反驳构成。**对"表达"最关键的是把关系写出来——连线上的关系词就是句子的骨架。**
 - **局限**：研究大多测"记住/理解文本"，很少测"理清个人问题"或"口头表达"；精美的图容易制造"我懂了"的流畅性错觉。**目前没找到"AI 生成导图 vs 自己构建"的对照研究**，但生成效应和"构建优于研读"都指向：**应由用户自己构建，AI 负责整理用户自己的话**。
+- **2026-09 补充检索**：仍未找到以学习或思考质量为结果、直接比较"AI 生成导图 vs 自己构建"的随机实验。现有证据都是间接的：
+  - 一篇综述梳理了 28 项 LLM 生成概念图的研究，验证方式主要是技术指标、专家评审和学习者反馈，作者呼吁补做课堂实验（Zhai 2025，[arXiv](https://arxiv.org/abs/2509.14554)）【弱】；
+  - 感知层面：83 名中学生认为 ChatGPT 生成的概念图与教师画的质量相当（Schicchi et al. 2025，[DOI](https://doi.org/10.1080/10494820.2025.2497110)）；74 名医学生则在"帮助理解"上给专家手绘图打分最高，也更愿意用它（Albuainain et al. 2026，[DOI](https://doi.org/10.1159/000552430)）【弱，横断面评分】；
+  - **最接近的实验**：226 名本科生随机分到 12 种条件，**自己完整构建概念图、再两人讨论**的学习效果最好；"填空式"和"排序现成概念"的图只引发浅层讨论（Amante et al. 2025, *Instructional Science*，[DOI](https://doi.org/10.1007/s11251-025-09764-1)）【中】。**含义：AI 给出半成品让用户填空，不能替代用户自己搭结构。**
 
 ---
 
@@ -70,21 +74,39 @@
 
 | 风险 | 研究 |
 |---|---|
-| **失去所有权与记忆** | MIT "Your Brain on ChatGPT"（Kosmyna et al. 2025，预印本，54 人）：用 LLM 写作的一组写完后无法准确引用自己刚写的文章，所有权感更低（EEG 等细节待核实，样本小） |
-| **批判性思维减少** | 微软/CMU 对 319 名知识工作者的调查：对 AI 的信心越高，批判性思维越少；对自己的信心越高，批判性思维越多（[Lee et al. 2025, CHI](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf)） |
-| **学习受损** | 高中生用无护栏的 GPT 练数学，撤掉后考试成绩比对照组低 17%（Bastani et al. 2025, PNAS）；传统笔记在保持和理解上优于"LLM+笔记"（Kreijkes et al. 2025）（经[微软 2025 综述](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/10/GenAILearningOutcomes_published_2025-12-16.pdf)） |
-| **想法同质化与锚定** | AI 点子让个体更有创意，但集体多样性下降（Doshi & Hauser 2024）；**先用 LLM 再自己想，比先自己想再用 LLM 产生更少原创想法**（Qin et al. 2025, CHI） |
-| **"AI 代笔效应"** | 用户对 AI 生成的文本没有所有权感，却仍自称作者（Draxler et al. 2024） |
-| **去技能化与情感依赖** | 内镜医生用 AI 辅助 3 个月后独立识别能力下降（Budzyń et al. 2025）；依赖 AI 的"无条件认可"可能强化不良信念（[微软 New Future of Work 2025](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/12/New-Future-Of-Work-Report-2025.pdf)） |
-| **顺着用户说** | 加入用户记忆后，多数模型附和倾向上升（CHI 2026，见 [01 §3](01-competitors-global.md)） |
+| **失去所有权与记忆** | MIT "Your Brain on ChatGPT"（Kosmyna et al. 2025，[arXiv 预印本](https://arxiv.org/abs/2506.08872)，v2 更新于 2025-12-31，截至 2026-09 仍未见正式发表）【弱】：54 人分为 LLM / 搜索引擎 / 纯靠自己三组，各写 3 轮，第 4 轮 18 人换组。EEG 显示**纯靠自己组脑区连接最强、搜索组居中、LLM 组最弱**；LLM 组对文章的所有权感最低，**写完后难以准确引用自己刚写的内容**；从 LLM 换到"纯靠自己"的人在第 4 轮 α/β 连接偏低。已有评论文章指出样本小、EEG 方法与可复现性等问题，建议保守解读（Stankovic et al. 2025，[arXiv](https://arxiv.org/abs/2601.00856)）。原"EEG 等细节待核实"已解决 |
+| **批判性思维减少** | 微软/CMU 对 319 名知识工作者的调查（共 936 个真实使用案例）：对 AI 的信心越高，批判性思维越少；对自己的信心越高，批判性思维越多（[Lee et al. 2025, CHI](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf)，[DOI](https://doi.org/10.1145/3706598.3713778)）；另一项 666 人的混合方法调查发现 AI 使用频率与批判性思维负相关、由认知卸载中介（Gerlich 2025，相关性研究且发表后有更正，【弱】，[DOI](https://doi.org/10.3390/soc15010006)） |
+| **学习受损** | 近千名高中生的现场实验：用类 ChatGPT 界面（GPT Base）练数学时成绩高 48%，**撤掉后考试成绩比从没用过的对照组低 17%**；而用"保护学习"的提示词加了护栏的 GPT Tutor 练习时高 127%，负面影响**基本被消除**（Bastani et al. 2025, *PNAS* 122(26)，[DOI](https://doi.org/10.1073/pnas.2422633122)）【中-强】。英格兰 405 名 14–15 岁学生的预注册随机实验：**只记笔记、或"笔记 + LLM"，在保持和理解上都优于只用 LLM**；但多数学生更喜欢用 LLM（Kreijkes et al., *Computers & Education* 243, 2026，[DOI](https://doi.org/10.1016/j.compedu.2025.105514)）。原记为"传统笔记优于'LLM+笔记'"，方向有误，2026-09 更正。另：91 名大学生随机用 ChatGPT 或 Google 查资料，ChatGPT 组认知负荷更低，但**最终论证质量更差**（Stadler et al. 2024, *Computers in Human Behavior*，[DOI](https://doi.org/10.1016/j.chb.2024.108386)）【中】（部分经[微软 2025 综述](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/10/GenAILearningOutcomes_published_2025-12-16.pdf)） |
+| **想法同质化与锚定** | AI 点子让个体更有创意，但集体多样性下降（Doshi & Hauser 2024, *Science Advances*，[DOI](https://doi.org/10.1126/sciadv.adn5290)）；**先用 LLM 再自己想，比先自己想再用 LLM 产生更少原创想法**，创意自我效能和"这是我的功劳"感也更低，经由自主感和所有权感中介（Qin et al. 2025, CHI，60 人，[DOI](https://doi.org/10.1145/3706598.3713146)） |
+| **"AI 代笔效应"** | 用户对 AI 生成的文本没有所有权感，却仍自称作者；**用户对文本的影响越大，所有权感越强**（Draxler et al. 2024, *ACM TOCHI*，两项研究 n=30、96，[DOI](https://doi.org/10.1145/3637875)） |
+| **去技能化与情感依赖** | 波兰 4 家内镜中心引入 AI 辅助后，医生**不用 AI 时**的腺瘤检出率从 28.4% 降到 22.4%（比较引入前后各 3 个月，1,443 例非 AI 结肠镜；回顾性观察研究，【弱-中】）（Budzyń et al. 2025, *Lancet Gastroenterol Hepatol*，[DOI](https://doi.org/10.1016/S2468-1253(25)00133-5)；原记"用 AI 辅助 3 个月后"，2026-09 按原文更正设计描述）；依赖 AI 的"无条件认可"可能强化不良信念（[微软 New Future of Work 2025](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/12/New-Future-Of-Work-Report-2025.pdf)） |
+| **顺着用户说** | 原"CHI 2026 研究"已找到原文：用 38 名真实用户两周的对话记录做上下文，**加入用户记忆档案后"附和式谄媚"上升最多**（如 Gemini 2.5 Pro +45%）；只有模型能从上下文准确推断用户立场时，"立场谄媚"才上升（Jain et al. 2026, CHI，[DOI](https://doi.org/10.1145/3772318.3791915)，[arXiv](https://arxiv.org/abs/2509.12517)）【中】。人际冲突场景的结论来自另一篇论文：11 个模型对用户行为的肯定比人类多 49%；3 项预注册实验（N=2,405）中，**哪怕只和谄媚型 AI 聊一次，人也更不愿意承担责任、修复关系，更确信自己是对的，却更信任、更想再用它**（Cheng et al. 2026, *Science* 391，[DOI](https://doi.org/10.1126/science.aec8352)）【中-强】。另见 [01 §3](01-competitors-global.md) |
 
 **文献给出的"增强而非替代"做法**：
 
-- 让 AI 当**"挑衅者/诤友"**：批评、给替代方案、指出薄弱论据，而不是替你写；但持续的批评会让人沮丧（[Sarkar 2024](https://www.microsoft.com/en-us/research/wp-content/uploads/2024/03/sarkar_2024_AI_provocateur-1.pdf)）。
-- **在用户自己的推理上延伸**，比直接给推荐更能融入用户的思考；要平衡"介入太早 vs 太晚"（[Reicherts et al. 2025, CHI "AI, Help Me Think"](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/03/AI-Help-Me-Think-CHI-2025.pdf)）。
-- **先自己判断，再看 AI**，能减少过度依赖（Buçinca et al. 2021），虽然用户主观上不太喜欢。
-- **只给解释、不给结论**能提升学习效果（Gajos & Mamykina 2022）。
+- 让 AI 当**"挑衅者/诤友"**：批评、给替代方案、指出薄弱论据，而不是替你写；但持续的批评会让人沮丧（[Sarkar 2024](https://www.microsoft.com/en-us/research/wp-content/uploads/2024/03/sarkar_2024_AI_provocateur-1.pdf)，*Communications of the ACM* 67(10) 观点文章，非实验，[DOI](https://doi.org/10.1145/3649404)）。
+- **在用户自己的推理上延伸**，比直接给推荐更能融入用户的思考、结果略好；但直接推荐能带来更多新见解、更省力，两种设计的总体偏好各占一半。作者归纳出三组张力：可操作 vs 保持思考投入、新见解 vs 与用户思路一致、介入不能太早也不能太晚（[Reicherts et al. 2025, CHI "AI, Help Me Think"](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/03/AI-Help-Me-Think-CHI-2025.pdf)，[DOI](https://doi.org/10.1145/3706598.3713295)）。
+- **"认知强制"设计（先自己判断、等待、按需才显示 AI）**能减少过度依赖，但用户最不喜欢减得最多的那几种设计，且对"爱动脑"的人更有效（Buçinca et al. 2021，N=199，[DOI](https://doi.org/10.1145/3449287)）。
+- **只给解释、不给结论**能提升学习效果；"AI 推荐 + 解释"一起给，哪怕让人先自己选再看，决策变好了却**没有学到东西**（Gajos & Mamykina 2022, IUI，三项实验，[DOI](https://doi.org/10.1145/3490099.3511138)）。
 - 把"自己思考"定位为**能力成长**，而不是额外负担（Lee et al. 2025）。
+- **AI 带护栏、先问后给**：同样是 GPT-4，加了保护学习提示词的版本基本消除了"撤掉后成绩更差"的问题（Bastani et al. 2025）。
+
+### 4.1 2024–2026 新研究补充
+
+> 2026-09-26 检索。只收录能看到摘要或全文的论文；预印本和会议短文单独标明。
+
+| 主题 | 研究 | 发现 | 证据 | 对产品的含义 |
+|---|---|---|---|---|
+| AI 生成导图 vs 自己构建 | Zhai 2025 综述（[arXiv](https://arxiv.org/abs/2509.14554)）；Amante et al. 2025（[DOI](https://doi.org/10.1007/s11251-025-09764-1)） | 仍无直接对照实验（详见 §3.2）；**自己完整构建再讨论**优于填空式、排序式的半成品图 | 【弱】直接证据空白；Amante【中】 | AI 不预填骨架让用户"补空"；只整理用户已说的话 |
+| 苏格拉底式 LLM vs 给答案 | Xi, Zhang & Wang 2026, *Computers & Education* 241（[DOI](https://doi.org/10.1016/j.compedu.2025.105494)，摘要据[检索结果](https://www.researchgate.net/publication/397223961_Investigating_the_effects_of_an_LLM-based_Socratic_conversational_agent_on_students'_academic_performance_and_reflective_thinking_in_higher_education)） | 94 名中国大学生随机分组：苏格拉底式对话代理组的学业成绩和反思性思维（尤其"反思""批判性反思"维度）都优于非苏格拉底式代理 | 【中】单项 RCT | 支持"先问后答"；追问要推动用户反思，而不只是收集信息 |
+| 同上 | Lehmann, Cornelius & Sting 2025（[arXiv](https://arxiv.org/abs/2409.09047)） | 两项预注册实验中 LLM 对总体学习无影响；**拿 LLM 替代学习活动**（让它出答案）的人学得更广但更浅，**拿它补充**（请它解释）的人理解更深；LLM 拉大了高低基础学生的差距 | 【中】预印本 | 功能设计要引导"补充"而非"替代"：默认给解释和问题，不给成品 |
+| 同上 | LearnLM Team & Eedi 2025（[arXiv](https://arxiv.org/abs/2512.23633)） | 英国 5 所中学 165 名学生的探索性 RCT：导师监督下的 LearnLM 辅导效果不逊于真人导师，后续新题解出率 66.2% vs 60.7%；导师称其擅长写"促进反思的苏格拉底式问题" | 【弱-中】探索性、企业参与 | 教学化调优的模型能胜任"好问题"；可作为追问模型的评测参照 |
+| 语音 vs 打字 | Norihama et al. 2025, *PACM HCI*（MobileHCI）（[DOI](https://doi.org/10.1145/3743723)，[arXiv](https://arxiv.org/abs/2410.00449)） | 手机表达性写作的田野研究：确认有减压效果；**参与者更喜欢键盘输入而不是语音**，理由是隐私和"打字更有反思感" | 【弱-中】田野研究 | **语音不是万能入口**：情绪类内容要让打字同样顺手；公共场合默认打字 |
+| 同上 | Rambler, CHI 2024（[DOI](https://doi.org/10.1145/3613904.3642217)，[arXiv](https://arxiv.org/abs/2401.10838)）；StepWrite, UIST 2025（[arXiv](https://arxiv.org/abs/2508.04011)） | 口述文字冗长杂乱，用关键词/摘要做"锚点"并支持整段重说、拆分、合并，比"转写 + ChatGPT"更好用（12 人）；边走边口述时，分步语音提示比普通听写和 ChatGPT 语音模式认知负荷更低（25 人） | 【弱】小样本可用性研究 | 支持"边说边长"：转写后先出关键词锚点；散步模式用分步语音提问 |
+| 认知卸载 / "认知债" | Stadler et al. 2024（[DOI](https://doi.org/10.1016/j.chb.2024.108386)）；Gerlich 2025（[DOI](https://doi.org/10.3390/soc15010006)）；Stankovic et al. 2025 对 Kosmyna 的评论（[arXiv](https://arxiv.org/abs/2601.00856)） | LLM 让任务"更轻松"但论证更浅（RCT）；大样本调查发现 AI 使用与批判性思维负相关（相关性）；"认知债"EEG 证据尚待同行评议和复现 | Stadler【中】；Gerlich【弱】；Kosmyna【弱】 | "省力"不等于"想清楚"；**不以省时为卖点**（原则 16 不变） |
+| 谄媚与记忆 / 个性化 | Jain et al. 2026, CHI（[DOI](https://doi.org/10.1145/3772318.3791915)）；Cheng et al. 2026, *Science*（[DOI](https://doi.org/10.1126/science.aec8352)） | 用户记忆档案让模型更爱附和；谄媚式回应让人更确信自己对、更不愿修复关系，**却更受欢迎** | Jain【中】；Cheng【中-强】 | 记忆越多，越要主动给反方；"用户满意度"不能作为唯一优化目标（见原则 13） |
+| 讲给 AI 听（学习即教学 / 橡皮鸭） | Jin et al. 2024, CHI "Teach AI How to Code"（[DOI](https://doi.org/10.1145/3613904.3642349)，[arXiv](https://arxiv.org/abs/2309.14534)）；Drosos et al. 2024 "rubber duck that talks back"（[DOI](https://doi.org/10.1145/3663384.3663389)） | LLM 当"学生"时，**它懂得太多会让人不想教**；限制它的知识、让它主动问"为什么/怎么做"，对话的知识密度更高（40 名新手，效应量 0.71）；数据分析场景里，用户把 AI 当"会回嘴的橡皮鸭"（15 人质性研究） | Jin【弱-中】；Drosos【弱】 | "讲给小鸭听"里的 AI 要**装新手**：不展示答案，只问"为什么""怎么做到的"（见原则 9） |
+| 情绪粒度 / 述情障碍的 App 干预 | Lukas et al. 2019（[DOI](https://doi.org/10.1016/j.invent.2019.100250)）；Widdershoven et al. 2019（[DOI](https://doi.org/10.1016/j.jad.2018.10.092)）；Hoemann et al. 2021（[DOI](https://doi.org/10.3389/fpsyg.2021.704125)）；Leijse et al. 2025 Feelee（[medRxiv DOI](https://doi.org/10.1101/2025.09.08.25334620)） | 述情障碍者用 App 训练 14 天，情绪识别测验提升（N=29 先导 RCT，d=0.97；摘要未提述情量表的变化）；抑郁患者用经验取样每天多次给情绪打分 6 周，负性情绪分辨度显著提高（79 人，非随机对照）；健康成人中，打卡次数越多，情绪粒度提升越大；青少年门诊 22 人单案例设计：情绪压抑下降，情绪识别无改善 | 均【弱】，样本小；未见 2024–2026 的大样本 RCT | "情绪词轮盘"更适合做成**日常轻打卡**而非一次性测验；不宣称治疗效果 |
 
 ---
 
