@@ -96,7 +96,7 @@
 
 ### 3.3 提示词（可直接复制）
 
-规则来自 [03 §5 十六条设计原则](03-user-insights.md) 和 [06 §4.3–4.4](06-tech-architecture.md)。
+规则来自 [03 §5 设计原则](03-user-insights.md) 和 [06 §4.3–4.4](06-tech-architecture.md)。
 
 **P1 · 清洗 + 结构（输出 Markdown 大纲）**
 

@@ -110,7 +110,7 @@
 
 ---
 
-## 5. 十六条产品设计原则
+## 5. 十八条产品设计原则（前 16 条来自研究，17–18 来自 2026-09 的用户评论）
 
 | # | 原则 | 依据 | 在 App 里怎么落地 |
 |---|---|---|---|
@@ -130,6 +130,8 @@
 | 14 | **复盘靠凭记忆重建，而不是反复看图** | 提取练习；间隔效应；凭记忆画概念图与凭记忆写段落同样有效（Blunt & Karpicke 2014，2026-09 补） | 演讲、面试的导图提供"盲讲 / 盲画"：先隐藏节点，讲完再对照；按 1 / 3 / 7 天间隔回推"这个结论你还同意吗？" |
 | 15 | **为 ADHD 和高焦虑用户降低启动与维持成本** | 执行功能困难；焦虑挤占工作记忆 | 一步启动（小组件、操作按钮、Siri）；随时中断、自动保存，回来时提示"上次停在……"；没处理的线头放进温和的"停车场"——**不用红点，不惩罚断签** |
 | 16 | **把"自己想"定位为成长，而不是省时间** | Lee 2025 | 周回顾展示"你提出的新点子""你讲清楚的主题""比上周更具体的地方"，**不展示"AI 替你写了多少字"** |
+| 17 | **不在脆弱时刻变现**（2026-09 补） | 用户评论：ADHD 用户指责"靠你忘记取消试用赚钱"；心理类 App 在给出"抑郁分"后、或用户正在哭时弹付费墙，被当作二次伤害（[08 §2.5](08-user-voices.md)） | 情绪倾诉、危机转介流程里永远不出现付费墙和促销；不做"先测分再卖课"；试用到期前 48 小时提醒，试用后默认转月付 |
+| 18 | **倾听时不抢话，追问时不重复**（2026-09 补） | 用户评论与社区：AI 语音"一停顿就抢话"、反复问已经答过的问题（[08 §2.4](08-user-voices.md)）；与原则 5 一致 | 倾倒阶段只听不说，用户按住说话或说"好了"之后才追问；记住问过和答过的；每个问题带"跳过"和"换个方向" |
 
 ---
 
@@ -173,14 +175,26 @@
 - "The AI is driving a good bit of the concepts; I simply try to guide it… 60% AI, 40% my ideas" ——艺术家（[Anthropic Interviewer, 2025-12](https://www.anthropic.com/research/anthropic-interviewer)）
 - "I hate to admit it, but the plugin has most of the control when using this." ——音乐人（同上）
 
+**社区用户（2026-09 补，Reddit / Hacker News，明细见 [附录 08c](appendix/08c-community-en.md)）**
+
+- “The bigger issue for me was having capture be frictionless but processing it still require the same effort as a normal note.” ——r/PKMS（评论，帖子《Triage debt made me start cold-deleting voice notes that pro…》），2026-08-15（[链接](https://www.reddit.com/r/PKMS/comments/1vo62wd/comment/p3t2tv6/)）→ **堆积发生在记下来之后**
+- “I specifically tell it to ask me 1 question at a time in a loop where I answer and we volley N times (could be 10-20) and make the questions adaptive.” ——r/ChatGPT（评论，帖子《Anyone else use ChatGPT more as a thinking partner than a to…》），2026-02-16（[链接](https://www.reddit.com/r/ChatGPT/comments/1r63a8q/comment/o5o2hcn/)）→ **有人已经在让 ChatGPT"一次只问一个"**
+- “At the end I asked it to create a markdown file with all the ideas we'd come up with... and it couldn't. … gave me a huge text blob (which it proceeded to read) with all the ideas mashed together.” ——r/ChatGPT（帖子《Can ChatGPT voice mode create docs?》），2026-09-09（[链接](https://www.reddit.com/r/ChatGPT/comments/1wbxnec/)）→ **通用助手聊完留不下结构**
+- “with a real person there's this half second where I'm still assembling the sentence and I can see them waiting. … Voice mode doesn't care if I take eight seconds.” ——r/ChatGPT（评论，帖子《ChatGPT's voice mode is insanely good. I am addicted to it.》），2026-08-21（[链接](https://www.reddit.com/r/ChatGPT/comments/1vu8586/comment/p519cea/)）→ **允许停顿本身就有价值**
+- “I don't like talking since I haven't enough time to think. Typing is better IMO.” ——r/ChatGPT（评论，帖子《ChatGPT's voice mode is insanely good. I am addicted to it.》），2026-08-21（[链接](https://www.reddit.com/r/ChatGPT/comments/1vu8586/comment/p50zury/)）→ **反证：打字派不少，文字倾倒要同等好用**
+
 ---
 
 ## 8. 待补的用户研究
 
-- **英文社区原话**：Reddit（r/ADHD、r/productivity、r/PKMS、r/Journaling、r/alexithymia、r/mindmapping）、Hacker News、Product Hunt 与 App Store 评论（Mapify、Xmind AI、MindNode、AudioPen、Voicenotes 等）。
-- **待验证的假设**：语音笔记堆积后没人处理；手机上拖拽节点太麻烦；AI 导图像维基百科摘要、"不是我的想法"；导图画得漂亮，却没有想清楚。
-- **建议编码维度**：启动难 / 分类焦虑 / 工具摩擦 / AI 结果泛泛或"不是我的" / 依赖担忧 / 隐私。
-- **最有价值的一步**：直接做 10–15 个目标用户访谈 + 一次"绿野仙踪"测试（见 [07 §验证计划](07-compliance-business-roadmap.md)）。
+- ~~英文社区原话~~：**2026-09-26 已补**。Reddit、Hacker News、论坛 70 条原话，加上约 3,700 条中英文 App Store 评论，见 [08-用户声音](08-user-voices.md)。
+- **待验证假设的现状**（详见 [08 §3](08-user-voices.md)）：
+  - 语音笔记堆积后没人处理——**证实（强）**，AI 摘要也会堆积；
+  - 手机上拖拽节点太麻烦——**证实，但要改写**：缺的是重组操作，另有手势冲突；
+  - AI 导图像百科摘要、"不是我的想法"——**证实**（针对"输入主题 → 生成导图"类 AI）；
+  - 导图画得漂亮却没想清楚——**证据不足**，要靠访谈。
+- **评论回答不了、要去访谈里问的**：追问是不是付费点；当场归位和事后整理哪个留存更好；"3 个候选 + 改写"对说不出感受的人是否有效；语音和文字倾倒的真实比例；定位要不要避开"AI 日记"。
+- **最有价值的一步**：10–15 个目标用户访谈 + 一次"绿野仙踪"测试，材料见 [09-验证执行包](09-validation-kit.md)。
 
 ---
 
