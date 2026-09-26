@@ -4,7 +4,7 @@
 >
 > **可信度标注**：【强】= 多项元分析或大样本重复；【中】= 少量 RCT、结论一致；【弱】= 理论推演、预印本或自报告调查。"(待核实)"= 本轮没能在线复核具体数字。学术站点和 Reddit/Hacker News 在本轮抓取环境中大多无法访问，**英文社区原话未采集，也没有编造**；第 7 节（原误写为第 4 节）的英文原话来自同行评议论文和公开访谈研究的参与者。
 >
-> **2026-09-26 第二轮核实**：经 Crossref、PubMed、ERIC、arXiv 摘要页及作者/出版方公开 PDF，逐条核对了本文引用的 60 余项研究的作者、年份、期刊与关键数字，并在文末补了 [DOI 参考文献](#9-参考文献doi)。**更正 7 处**：Kreijkes 2025 的结论方向、Farrand 2002 的"10% vs 6%"、事前验尸"提高 30%"的出处、提取练习总体效应量、Budzyń 2025 的研究设计、"CHI 2026 附和研究"的具体论文、Schroeder 2018 研究的是概念图而非 Buzan 式导图。**解决 4 项"待核实"**：MITI 反映/提问比、凭记忆画图、MIT EEG 细节、CHI 2026 论文。新增 [§4.1 2024–2026 新研究](#41-20242026-新研究补充)，并据此微调了原则 1、4、9、10、13、14 的依据或落地（新增内容标"2026-09 补"）。第 7 节原话已在原论文 PDF 中逐句核对，全部找到。
+> **2026-09-26 第二轮核实**：经 Crossref、PubMed、ERIC、arXiv 摘要页及作者/出版方公开 PDF，核对了本文引用的约 55 项研究的作者、年份与出处，其中约 30 项的关键数字已与摘要或原文逐一比对，并在文末补了 [DOI 参考文献](#9-参考文献doi)。**更正 7 处**：Kreijkes 2025 的结论方向、Farrand 2002 的"10% vs 6%"、事前验尸"提高 30%"的出处、提取练习总体效应量、Budzyń 2025 的研究设计、"CHI 2026 附和研究"的具体论文、Schroeder 2018 研究的是概念图而非 Buzan 式导图。**解决 4 项"待核实"**：MITI 反映/提问比、凭记忆画图、MIT EEG 细节、CHI 2026 论文。新增 [§4.1 2024–2026 新研究](#41-20242026-新研究补充)，并据此微调了原则 1、4、9、10、13、14 的依据或落地（新增内容标"2026-09 补"）。第 7 节原话已在原论文 PDF 中逐句核对，全部找到。
 
 ---
 
@@ -59,7 +59,7 @@
 ### 3.2 思维导图到底有没有用？
 
 - **总体有效，而且自己画强于看别人的图**【强】：[Schroeder et al. 2018](https://doi.org/10.1007/s10648-017-9403-9)（*Educational Psychology Review* 30:431–455，2017 年在线发表）元分析（142 个独立效应量、n=11,814）总体 g=0.58；**自己构建 g=0.72，研读现成的图 g=0.43**（[ERIC 摘要](https://eric.ed.gov/?id=EJ1179084)，2026-09 核实）。注意：该元分析研究的是**概念图 / 知识图**（连线带关系词），不是 Buzan 式思维导图。另见 [Nesbit & Adesope 2006](https://doi.org/10.3102/00346543076003413)（55 项研究、5,818 人）。
-- **但并非最优策略**【强】：与边看材料边画概念图相比，**提取练习**带来更多有意义的学习（[Karpicke & Blunt 2011, Science](https://doi.org/10.1126/science.1199327)；WWC 复核：最终测试平均正确率提取练习 67%、边看边画概念图 45%、重复阅读 49%、只读一遍 27%，[源](https://eric.ed.gov/?id=ED521113)）。**"凭记忆画图"能同时获得提取练习的好处**：合上材料凭记忆画概念图，与凭记忆写段落效果相当，都优于再读一遍（一周后测试，Blunt & Karpicke 2014，[源](https://doi.org/10.1037/a0035934)）——原"(待核实)"已解决。
+- **但并非最优策略**【强】：与边看材料边画概念图相比，**提取练习**带来更多有意义的学习（[Karpicke & Blunt 2011, Science](https://doi.org/10.1126/science.1199327)；WWC 复核：最终测试平均正确率提取练习 67%、边看边画概念图 45%、重复阅读 49%、只读一遍 27%，[源](https://eric.ed.gov/?id=ED521113)）。**"凭记忆画图"能同时获得提取练习的好处**：合上材料凭记忆画概念图，与凭记忆写段落效果相当，都优于再学习一遍（一周后测试，Blunt & Karpicke 2014，[源](https://doi.org/10.1037/a0035934)）——原"(待核实)"已解决。
 - **Buzan 式思维导图的证据更弱**【中】：医学生 50 人，一周后导图组的事实回忆比自选学习方法组高约 10%，但 95% 置信区间为 −1% 至 22%（不显著）；导图组的学习动机更低，若动机相当，差距估计为 15%（[Farrand et al. 2002](https://doi.org/10.1046/j.1365-2923.2002.01205.x)）。原记为"导图组提高约 10%，自选方法组约 6%"，摘要中无"6%"，2026-09 更正。
 - **图的类型决定用途**：思维导图是放射状的自由联想；概念图的连线上写着关系词，每条"节点—关系词—节点"就是一个命题；论证图由主张、理由、反驳构成。**对"表达"最关键的是把关系写出来——连线上的关系词就是句子的骨架。**
 - **局限**：研究大多测"记住/理解文本"，很少测"理清个人问题"或"口头表达"；精美的图容易制造"我懂了"的流畅性错觉。**目前没找到"AI 生成导图 vs 自己构建"的对照研究**，但生成效应和"构建优于研读"都指向：**应由用户自己构建，AI 负责整理用户自己的话**。
@@ -74,7 +74,7 @@
 
 | 风险 | 研究 |
 |---|---|
-| **失去所有权与记忆** | MIT "Your Brain on ChatGPT"（Kosmyna et al. 2025，[arXiv 预印本](https://arxiv.org/abs/2506.08872)，v2 更新于 2025-12-31，截至 2026-09 仍未见正式发表）【弱】：54 人分为 LLM / 搜索引擎 / 纯靠自己三组，各写 3 轮，第 4 轮 18 人换组。EEG 显示**纯靠自己组脑区连接最强、搜索组居中、LLM 组最弱**；LLM 组对文章的所有权感最低，**写完后难以准确引用自己刚写的内容**；从 LLM 换到"纯靠自己"的人在第 4 轮 α/β 连接偏低。已有评论文章指出样本小、EEG 方法与可复现性等问题，建议保守解读（Stankovic et al. 2025，[arXiv](https://arxiv.org/abs/2601.00856)）。原"EEG 等细节待核实"已解决 |
+| **失去所有权与记忆** | MIT "Your Brain on ChatGPT"（Kosmyna et al. 2025，[arXiv 预印本](https://arxiv.org/abs/2506.08872)，v2 更新于 2025-12-31，arXiv 页面未标注正式发表）【弱】：54 人分为 LLM / 搜索引擎 / 纯靠自己三组，各写 3 轮，第 4 轮 18 人换组。EEG 显示**纯靠自己组脑区连接最强、搜索组居中、LLM 组最弱**；LLM 组对文章的所有权感最低，**写完后难以准确引用自己刚写的内容**；从 LLM 换到"纯靠自己"的人在第 4 轮 α/β 连接偏低。已有评论文章指出样本小、EEG 方法与可复现性等问题，建议保守解读（Stankovic et al. 2025，[arXiv](https://arxiv.org/abs/2601.00856)）。原"EEG 等细节待核实"已解决 |
 | **批判性思维减少** | 微软/CMU 对 319 名知识工作者的调查（共 936 个真实使用案例）：对 AI 的信心越高，批判性思维越少；对自己的信心越高，批判性思维越多（[Lee et al. 2025, CHI](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf)，[DOI](https://doi.org/10.1145/3706598.3713778)）；另一项 666 人的混合方法调查发现 AI 使用频率与批判性思维负相关、由认知卸载中介（Gerlich 2025，相关性研究且发表后有更正，【弱】，[DOI](https://doi.org/10.3390/soc15010006)） |
 | **学习受损** | 近千名高中生的现场实验：用类 ChatGPT 界面（GPT Base）练数学时成绩高 48%，**撤掉后考试成绩比从没用过的对照组低 17%**；而用"保护学习"的提示词加了护栏的 GPT Tutor 练习时高 127%，负面影响**基本被消除**（Bastani et al. 2025, *PNAS* 122(26)，[DOI](https://doi.org/10.1073/pnas.2422633122)）【中-强】。英格兰 405 名 14–15 岁学生的预注册随机实验：**只记笔记、或"笔记 + LLM"，在保持和理解上都优于只用 LLM**；但多数学生更喜欢用 LLM（Kreijkes et al., *Computers & Education* 243, 2026，[DOI](https://doi.org/10.1016/j.compedu.2025.105514)）。原记为"传统笔记优于'LLM+笔记'"，方向有误，2026-09 更正。另：91 名大学生随机用 ChatGPT 或 Google 查资料，ChatGPT 组认知负荷更低，但**最终论证质量更差**（Stadler et al. 2024, *Computers in Human Behavior*，[DOI](https://doi.org/10.1016/j.chb.2024.108386)）【中】（部分经[微软 2025 综述](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/10/GenAILearningOutcomes_published_2025-12-16.pdf)） |
 | **想法同质化与锚定** | AI 点子让个体更有创意，但集体多样性下降（Doshi & Hauser 2024, *Science Advances*，[DOI](https://doi.org/10.1126/sciadv.adn5290)）；**先用 LLM 再自己想，比先自己想再用 LLM 产生更少原创想法**，创意自我效能和"这是我的功劳"感也更低，经由自主感和所有权感中介（Qin et al. 2025, CHI，60 人，[DOI](https://doi.org/10.1145/3706598.3713146)） |
@@ -152,6 +152,8 @@
 
 ## 7. 研究参与者原话（英文，已核实出处）
 
+> 2026-09-26：以下 12 句已在 Reicherts et al. 2025、Lee et al. 2025 的作者版 PDF 和 Anthropic Interviewer 页面中逐句找到，措辞一致。
+
 **说不出、写不出**
 
 - "had a hard time describing why I'm doing things" ——ExtendAI 研究参与者（[Reicherts et al. 2025](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/03/AI-Help-Me-Think-CHI-2025.pdf)，下同）
@@ -179,3 +181,74 @@
 - **待验证的假设**：语音笔记堆积后没人处理；手机上拖拽节点太麻烦；AI 导图像维基百科摘要、"不是我的想法"；导图画得漂亮，却没有想清楚。
 - **建议编码维度**：启动难 / 分类焦虑 / 工具摩擦 / AI 结果泛泛或"不是我的" / 依赖担忧 / 隐私。
 - **最有价值的一步**：直接做 10–15 个目标用户访谈 + 一次"绿野仙踪"测试（见 [07 §验证计划](07-compliance-business-roadmap.md)）。
+
+---
+
+## 9. 参考文献（DOI）
+
+> 2026-09-26 经 Crossref / PubMed / ERIC / arXiv 核对作者、年份与出处。按本文出现顺序分组。
+
+**§1 机制**
+- Cowan, N. (2001). The magical number 4 in short-term memory. *Behavioral and Brain Sciences*, 24, 87–114. https://doi.org/10.1017/s0140525x01003922
+- Levelt, W. J. M. (1981). The speaker's linearization problem. *Phil. Trans. R. Soc. B*, 295, 305–315. https://doi.org/10.1098/rstb.1981.0142 ；Levelt (1989). *Speaking: From Intention to Articulation*. MIT Press.
+- Alderson-Day, B., & Fernyhough, C. (2015). Inner speech. *Psychological Bulletin*, 141, 931–965. https://doi.org/10.1037/bul0000021
+- Brown, R., & McNeill, D. (1966). The "tip of the tongue" phenomenon. *JVLVB*, 5, 325–337. https://doi.org/10.1016/s0022-5371(66)80040-3
+- Tulving, E., & Pearlstone, Z. (1966). Availability versus accessibility of information in memory for words. *JVLVB*, 5, 381–391. https://doi.org/10.1016/s0022-5371(66)80048-8
+- Risko, E. F., & Gilbert, S. J. (2016). Cognitive offloading. *Trends in Cognitive Sciences*, 20, 676–688. https://doi.org/10.1016/j.tics.2016.07.002
+- Clark, A., & Chalmers, D. (1998). The extended mind. *Analysis*, 58, 7–19. https://doi.org/10.1093/analys/58.1.7
+- Masicampo, E. J., & Baumeister, R. F. (2011). Consider it done! *JPSP*, 101, 667–683. https://doi.org/10.1037/a0024192
+- Moran, T. P. (2016). Anxiety and working memory capacity: A meta-analysis and narrative review. *Psychological Bulletin*, 142, 831–864. https://doi.org/10.1037/bul0000051
+- Ramirez, G., & Beilock, S. L. (2011). Writing about testing worries boosts exam performance in the classroom. *Science*, 331, 211–213. https://doi.org/10.1126/science.1199427
+- Willcutt, E. G., et al. (2005). Validity of the executive function theory of ADHD: A meta-analytic review. *Biological Psychiatry*, 57, 1336–1346. https://doi.org/10.1016/j.biopsych.2005.02.006
+- Bagby, R. M., Parker, J. D. A., & Taylor, G. J. (1994). The twenty-item Toronto Alexithymia Scale—I. *J Psychosomatic Research*, 38, 23–32. https://doi.org/10.1016/0022-3999(94)90005-1
+- Barrett, L. F., Gross, J., Christensen, T. C., & Benvenuto, M. (2001). Knowing what you're feeling and knowing what to do about it. *Cognition & Emotion*, 15, 713–724. https://doi.org/10.1080/02699930143000239
+- Kashdan, T. B., Barrett, L. F., & McKnight, P. E. (2015). Unpacking emotion differentiation. *Current Directions in Psychological Science*, 24, 10–16. https://doi.org/10.1177/0963721414550708
+- Rozenblit, L., & Keil, F. (2002). The misunderstood limits of folk science. *Cognitive Science*, 26, 521–562. https://doi.org/10.1207/s15516709cog2605_1
+- Fernbach, P. M., Rogers, T., Fox, C. R., & Sloman, S. A. (2013). Political extremism is supported by an illusion of understanding. *Psychological Science*, 24, 939–946. https://doi.org/10.1177/0956797612464058
+
+**§2 方法**
+- Frattaroli, J. (2006). Experimental disclosure and its moderators: A meta-analysis. *Psychological Bulletin*, 132, 823–865. https://doi.org/10.1037/0033-2909.132.6.823
+- Bangert-Drowns, R. L., Hurley, M. M., & Wilkinson, B. (2004). The effects of school-based writing-to-learn interventions. *Review of Educational Research*, 74, 29–58. https://doi.org/10.3102/00346543074001029
+- Chi, M. T. H., et al. (1989). Self-explanations. *Cognitive Science*, 13, 145–182. https://doi.org/10.1207/s15516709cog1302_1 ；Chi, M. T. H., et al. (1994). Eliciting self-explanations improves understanding. *Cognitive Science*, 18, 439–477. https://doi.org/10.1207/s15516709cog1803_3
+- Fox, M. C., Ericsson, K. A., & Best, R. (2011). Do procedures for verbal reporting of thinking have to be reactive? *Psychological Bulletin*, 137, 316–344. https://doi.org/10.1037/a0021663
+- Braun, J. D., Strunk, D. R., Sasso, K. E., & Cooper, A. A. (2015). Therapist use of Socratic questioning predicts session-to-session symptom change. *Behaviour Research and Therapy*, 70, 32–37. https://doi.org/10.1016/j.brat.2015.05.004
+- Danry, V., Pataranutaporn, P., Mao, Y., & Maes, P. (2023). Don't just tell me, ask me. *CHI '23*. https://doi.org/10.1145/3544548.3580672
+- Moyers, T. B., Manuel, J. K., & Ernst, D. (2014; rev. 2015). *MITI 4.2.1 Coding Manual*. [PDF](https://motivationalinterviewing.org/sites/default/files/miti4_2.pdf)
+- Grant, A. M., & O'Connor, S. (2010). The differential effects of solution-focused and problem-focused coaching questions. *Industrial and Commercial Training*, 42, 102–111. https://doi.org/10.1108/00197851011026090 ；Grant, A. M. (2012). Making positive change. *J Systemic Therapies*, 31(2), 21–35. https://doi.org/10.1521/jsyt.2012.31.2.21
+- Lieberman, M. D., et al. (2007). Putting feelings into words. *Psychological Science*, 18, 421–428. https://doi.org/10.1111/j.1467-9280.2007.01916.x
+- Kircanski, K., Lieberman, M. D., & Craske, M. G. (2012). Feelings into words. *Psychological Science*, 23, 1086–1091. https://doi.org/10.1177/0956797612443830
+- Watkins, E. R. (2008). Constructive and unconstructive repetitive thought. *Psychological Bulletin*, 134, 163–206. https://doi.org/10.1037/0033-2909.134.2.163
+- Kross, E., Ayduk, O., & Mischel, W. (2005). When asking "why" does not hurt. *Psychological Science*, 16, 709–715. https://doi.org/10.1111/j.1467-9280.2005.01600.x ；Kross, E., et al. (2014). Self-talk as a regulatory mechanism. *JPSP*, 106, 304–324. https://doi.org/10.1037/a0035173
+- Adesope, O. O., Trevisan, D. A., & Sundararajan, N. (2017). Rethinking the use of tests. *Review of Educational Research*, 87, 659–701. https://doi.org/10.3102/0034654316689306
+- Bertsch, S., Pesta, B. J., Wiscott, R., & McDaniel, M. A. (2007). The generation effect: A meta-analytic review. *Memory & Cognition*, 35, 201–210. https://doi.org/10.3758/bf03193441
+
+**§3 框架与导图**
+- Kalyuga, S., Ayres, P., Chandler, P., & Sweller, J. (2003). The expertise reversal effect. *Educational Psychologist*, 38, 23–31. https://doi.org/10.1207/s15326985ep3801_4
+- Card, A. J. (2017). The problem with "5 whys". *BMJ Quality & Safety*, 26, 671–677（2016 年在线）. https://doi.org/10.1136/bmjqs-2016-005849
+- Mitchell, D. J., Russo, J. E., & Pennington, N. (1989). Back to the future. *J Behavioral Decision Making*, 2, 25–38. https://doi.org/10.1002/bdm.3960020103 ；Klein, G. (2007). Performing a project premortem. *HBR*. https://hbr.org/2007/09/performing-a-project-premortem
+- Hill, T., & Westbrook, R. (1997). SWOT analysis: It's time for a product recall. *Long Range Planning*, 30, 46–52. https://doi.org/10.1016/s0024-6301(96)00095-7
+- Schroeder, N. L., Nesbit, J. C., Anguiano, C. J., & Adesope, O. O. (2018). Studying and constructing concept maps: A meta-analysis. *Educational Psychology Review*, 30, 431–455. https://doi.org/10.1007/s10648-017-9403-9
+- Nesbit, J. C., & Adesope, O. O. (2006). Learning with concept and knowledge maps. *Review of Educational Research*, 76, 413–448. https://doi.org/10.3102/00346543076003413
+- Karpicke, J. D., & Blunt, J. R. (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. *Science*, 331, 772–775. https://doi.org/10.1126/science.1199327
+- Blunt, J. R., & Karpicke, J. D. (2014). Learning with retrieval-based concept mapping. *J Educational Psychology*, 106, 849–858. https://doi.org/10.1037/a0035934
+- Farrand, P., Hussain, F., & Hennessy, E. (2002). The efficacy of the "mind map" study technique. *Medical Education*, 36, 426–431. https://doi.org/10.1046/j.1365-2923.2002.01205.x
+- Amante, C., Lucero Fustes, M., & Montanero, M. (2025). Learning with concept maps. *Instructional Science*. https://doi.org/10.1007/s11251-025-09764-1
+
+**§4 AI 辅助思考**
+- Kosmyna, N., et al. (2025). Your brain on ChatGPT. arXiv:2506.08872. https://doi.org/10.48550/arXiv.2506.08872
+- Lee, H.-P., et al. (2025). The impact of generative AI on critical thinking. *CHI '25*. https://doi.org/10.1145/3706598.3713778
+- Bastani, H., et al. (2025). Generative AI without guardrails can harm learning. *PNAS*, 122(26), e2422633122. https://doi.org/10.1073/pnas.2422633122
+- Kreijkes, P., et al. (2026). Effects of LLM use and note-taking on reading comprehension and memory. *Computers & Education*, 243, 105514. https://doi.org/10.1016/j.compedu.2025.105514
+- Doshi, A. R., & Hauser, O. P. (2024). Generative AI enhances individual creativity but reduces the collective diversity of novel content. *Science Advances*, 10(28), eadn5290. https://doi.org/10.1126/sciadv.adn5290
+- Qin, P., Yang, C.-L., Li, J., Wen, J., & Lee, Y.-C. (2025). Timing matters. *CHI '25*. https://doi.org/10.1145/3706598.3713146
+- Draxler, F., et al. (2024). The AI ghostwriter effect. *ACM TOCHI*, 31. https://doi.org/10.1145/3637875
+- Budzyń, K., et al. (2025). Endoscopist deskilling risk after exposure to AI in colonoscopy. *Lancet Gastroenterol Hepatol*, 10(10), 896–903. https://doi.org/10.1016/S2468-1253(25)00133-5
+- Jain, S., Park, C., Viana, M., Wilson, A., & Calacci, D. (2026). Interaction context often increases sycophancy in LLMs. *CHI '26*. https://doi.org/10.1145/3772318.3791915
+- Cheng, M., Lee, C., Khadpe, P., Yu, S., Han, D., & Jurafsky, D. (2026). Sycophantic AI decreases prosocial intentions and promotes dependence. *Science*, 391. https://doi.org/10.1126/science.aec8352
+- Sarkar, A. (2024). AI should challenge, not obey. *Communications of the ACM*, 67(10), 18–21. https://doi.org/10.1145/3649404
+- Reicherts, L., Zhang, Z. T., et al. (2025). AI, help me think—but for myself. *CHI '25*. https://doi.org/10.1145/3706598.3713295
+- Buçinca, Z., Malaya, M. B., & Gajos, K. Z. (2021). To trust or to think. *PACM HCI*, 5(CSCW1). https://doi.org/10.1145/3449287
+- Gajos, K. Z., & Mamykina, L. (2022). Do people engage cognitively with AI? *IUI '22*, 794–806. https://doi.org/10.1145/3490099.3511138
+- Stadler, M., Bannert, M., & Sailer, M. (2024). Cognitive ease at a cost. *Computers in Human Behavior*, 160, 108386. https://doi.org/10.1016/j.chb.2024.108386
+- Gerlich, M. (2025). AI tools in society. *Societies*, 15(1), 6. https://doi.org/10.3390/soc15010006（更正：https://doi.org/10.3390/soc15090252）
+- §4.1 其余新研究的链接见表内。

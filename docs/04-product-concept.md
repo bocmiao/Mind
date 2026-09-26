@@ -193,8 +193,8 @@ flowchart LR
 | 分享扩展 | 从微信、浏览器、备忘录分享文字/链接进来当"素材" | P1 |
 | 拍照/手写识别 | 纸上草稿、白板照片 → 节点 | P2 |
 | Apple Watch 抬腕记录 | 散步、跑步时说一句 | P2 |
-| **散步模式** 🧪 | 戴 AirPods 边走边说，AI 偶尔用语音追问一句；回家后得到一张导图。步行时发散思维的创意产出平均提高约 60%（Oppezzo & Schwartz, 2014） | P1 |
-| **睡前清空** 🧪 | 睡前 5 分钟把明天要做的事和担心的事倒出来。研究发现睡前写具体的待办清单，入睡平均快约 9 分钟（Scullin et al., 2018） | P1 |
+| **散步模式** 🧪 | 戴 AirPods 边走边说，AI 偶尔用语音追问一句；回家后得到一张导图。步行时发散思维的创意产出平均提高约 60%（Oppezzo & Schwartz, 2014；实验 1 为 48 人跑步机上做"替代用途"测验，聚合思维测验反而略降，[原文](https://www.apa.org/pubs/journals/releases/xlm-a0036577.pdf)，2026-09 核实） | P1 |
+| **睡前清空** 🧪 | 睡前 5 分钟把明天要做的事和担心的事倒出来。研究发现睡前 5 分钟写具体的待办清单，比写"已完成的事"平均早约 9 分钟入睡（15.8 vs 25.1 分钟，57 名年轻人，多导睡眠监测；该研究只测了待办、没测"写担心"）（Scullin et al., 2018，[原文](https://pmc.ncbi.nlm.nih.gov/articles/PMC5758411/)，2026-09 核实） | P1 |
 
 ### B. 澄清：帮你把话说出来
 
@@ -372,9 +372,15 @@ flowchart LR
 
 ## 参考（本文引用的研究）
 
-- Oppezzo, M., & Schwartz, D. L. (2014). Give your ideas some legs: The positive effect of walking on creative thinking. *Journal of Experimental Psychology: Learning, Memory, and Cognition*. [Stanford 报道](https://news.stanford.edu/stories/2014/04/walking-vs-sitting-042414) · [APA PDF](https://www.apa.org/pubs/journals/releases/xlm-a0036577.pdf)
-- Scullin, M. K., et al. (2018). The effects of bedtime writing on difficulty falling asleep: A polysomnographic study comparing to-do lists and completed activity lists. *Journal of Experimental Psychology: General*. [Baylor 报道](https://kellercenter.hankamer.baylor.edu/news/story/2018/effects-bedtime-writing)
-- Masicampo, E. J., & Baumeister, R. F. (2011). Consider it done! Plan making can eliminate the cognitive effects of unfulfilled goals. *Journal of Personality and Social Psychology*, 101, 667–683. [PDF](https://users.wfu.edu/masicaej/MasicampoBaumeister2011JPSP.pdf)
-- Barrett, L. F., Gross, J., Christensen, T. C., & Benvenuto, M. (2001). Knowing what you're feeling and knowing what to do about it. *Cognition and Emotion*, 15(6), 713–724. [PDF](https://www.affective-science.org/pubs/2001/01MaprelationDiffReg.pdf)
-- Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. *Advances in Experimental Social Psychology*, 38, 69–119.
-- Diehl, M., & Stroebe, W. (1987). Productivity loss in brainstorming groups: Toward the solution of a riddle. *Journal of Personality and Social Psychology*, 53(3), 497–509.
+> 2026-09-26 第二轮核实：以下条目已经 Crossref / PubMed / 原文核对并补上 DOI；更多研究见 [03-用户洞察 §9](03-user-insights.md#9-参考文献doi)。
+
+- Oppezzo, M., & Schwartz, D. L. (2014). Give your ideas some legs: The positive effect of walking on creative thinking. *Journal of Experimental Psychology: Learning, Memory, and Cognition*, 40(4), 1142–1152. https://doi.org/10.1037/a0036577 · [Stanford 报道](https://news.stanford.edu/stories/2014/04/walking-vs-sitting-042414) · [APA PDF](https://www.apa.org/pubs/journals/releases/xlm-a0036577.pdf)。"约 60%"见原文实验 1 讨论部分（跑步机，替代用途测验）。
+- Scullin, M. K., Krueger, M. L., Ballard, H. K., Pruett, N., & Bliwise, D. L. (2018). The effects of bedtime writing on difficulty falling asleep: A polysomnographic study comparing to-do lists and completed activity lists. *Journal of Experimental Psychology: General*, 147(1), 139–146. https://doi.org/10.1037/xge0000374 · [PMC 全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC5758411/) · [Baylor 报道](https://kellercenter.hankamer.baylor.edu/news/story/2018/effects-bedtime-writing)。入睡潜伏期：待办组 15.82 分钟，已完成组 25.09 分钟（d=0.63）。
+- Masicampo, E. J., & Baumeister, R. F. (2011). Consider it done! Plan making can eliminate the cognitive effects of unfulfilled goals. *Journal of Personality and Social Psychology*, 101(4), 667–683. https://doi.org/10.1037/a0024192 · [PDF](https://users.wfu.edu/masicaej/MasicampoBaumeister2011JPSP.pdf)
+- Barrett, L. F., Gross, J., Christensen, T. C., & Benvenuto, M. (2001). Knowing what you're feeling and knowing what to do about it. *Cognition and Emotion*, 15(6), 713–724. https://doi.org/10.1080/02699930143000239 · [PDF](https://www.affective-science.org/pubs/2001/01MaprelationDiffReg.pdf)
+- Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. *Advances in Experimental Social Psychology*, 38, 69–119. https://doi.org/10.1016/s0065-2601(06)38002-1 。"中到大的效应"：94 项研究，d=0.65（作者本人的[综述](https://cancercontrol.cancer.gov/sites/default/files/2020-06/goal_intent_attain.pdf)）。
+- Diehl, M., & Stroebe, W. (1987). Productivity loss in brainstorming groups: Toward the solution of a riddle. *Journal of Personality and Social Psychology*, 53(3), 497–509. https://doi.org/10.1037/0022-3514.53.3.497 。实验 4 表明"生产阻塞"是互动小组产出低的主要原因。
+- Karpicke, J. D., & Blunt, J. R. (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. *Science*, 331, 772–775. https://doi.org/10.1126/science.1199327 （"盲讲 / 盲画"）
+- Blunt, J. R., & Karpicke, J. D. (2014). Learning with retrieval-based concept mapping. *Journal of Educational Psychology*, 106(3), 849–858. https://doi.org/10.1037/a0035934 （合上材料凭记忆画概念图，与凭记忆写段落同样有效，都优于再学习——对"盲画"的直接支持，2026-09 补）
+- Qin, P., Yang, C.-L., Li, J., Wen, J., & Lee, Y.-C. (2025). Timing matters: How using LLMs at different timings influences writers' perceptions and ideation outcomes in AI-assisted ideation. *CHI '25*. https://doi.org/10.1145/3706598.3713146 （§5.2"先用 AI 再自己想"会产生更少原创想法，60 人实验）
+- Jain, S., Park, C., Viana, M., Wilson, A., & Calacci, D. (2026). Interaction context often increases sycophancy in LLMs. *CHI '26*. https://doi.org/10.1145/3772318.3791915 ；Cheng, M., et al. (2026). Sycophantic AI decreases prosocial intentions and promotes dependence. *Science*, 391. https://doi.org/10.1126/science.aec8352 （§5.2"AI 记住的用户信息越多，越容易顺着用户说"：前者发现用户记忆档案让附和上升最多；后者发现附和让人更不愿修复人际关系、却更受欢迎，2026-09 补）
