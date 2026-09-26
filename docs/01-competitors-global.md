@@ -3,6 +3,8 @@
 > **数据说明**：第一轮抓取环境拦截了 App Store、多数官网和 Product Hunt 页面，价格与功能主要取自搜索摘要、官网和第三方评测，均附链接。标"三方"的数字来自评测聚合站，可能过时；标"(待核实)"的没能交叉验证。另外注意：edraw.ai（万兴旗下）发了大量竞品"评测"，属于竞品 SEO 内容，引用要谨慎。文末附 App Store ID，可用 `https://itunes.apple.com/lookup?id=<ID>&country=us` 批量补评分。
 >
 > **2026-09-26 第二轮核实**：用 iTunes Lookup API 和美区 App Store 商品页（内含内购价格表和版本历史）逐项核对。**iOS 价格一律以 App Store 内购列表为准**（内购列表最多显示 10 项、不标周期，周期按名称或官网推断）；功能以 App 描述和更新说明为准。本轮更正了 MindNode"没有 AI"、Rosebud 免费版、Voicenotes"下线会议机器人"、Allume v4、Orai、SimpleMind、Stoic 等 10 处说法；清掉 16 处"待核实/三方"（14 处价格、2 处功能），只剩 Heptabase"2025-12 取消终身授权"仍为三方。另外新增 [§1.2 App Store 数据快照](#12-app-store-数据快照2026-09-26) 和 [§1.3 2025–26 新进入者](#13-202526-新进入者)。**NotebookLM 已于 2026-07-16 更名 Gemini Notebook。**
+>
+> **2026-09-26 终稿核查**：重新调 iTunes Lookup API、美区商品页（内购表 + 版本历史）和各官方原文，逐条回查第二轮新增说法。快照评分、条数、版本日期、内购价与抓取时一致（个别条数当天略有增长，如 Gemini Notebook 61,282、Wispr Flow 16,185，不改）。按原文更正 7 处：Plaud 的 Skills 和 Memory 月份、SimpleMind 背景图案月份、Superwhisper S1、Gemini Notebook"7 月起同步"、Taskade Genesis 时间、Stoic 价格区间、Tiimo 用户数；AudioPen 收入按 2026-02 访谈更新为每月 $15K–20K；Voicenotes"听写键盘"的"键盘"二字改标推断；另把 Voicenotes"2026-04 下线会议机器人"从"(待核实)"恢复为有三方佐证（见 §3.1），Heptabase"2025-12 重做定价"补上官方更新日志。
 
 ---
 
@@ -42,7 +44,7 @@
 | 产品 | 平台 | AI 能力 | 价格（USD） | 优势 | 主要抱怨 |
 |---|---|---|---|---|---|
 | **Mapify**（Xmind 出品，前身 ChatMind） | iOS/iPadOS/Web/Android + 浏览器扩展 | PDF/Word/网页/YouTube（节点带时间戳）/播客/录音/图片 → 导图；对话式扩写、缩写、重组；转幻灯片；2026-06 新版 Chat 能直接改图：合并重复点、按主题/时间线/优先级重组（[博客](https://mapify.so/blog/new-mapify-chat-ai-mind-map-assistant)） | 免费 30 个一次性 credits；官网 Basic $9.99/月，年付折合 $5.99/月（1,000 credits/月）；Pro $19.99/月（年付 $11.99）；Unlimited $29.99/月（年付 $17.99）（[源](https://mapify.so/pricing)）。iOS 内购 Basic $9.99/月·$71.99/年、Pro $19.99/月·$143.99/年、Unlimited $29.99/月·$214.99/年（[App Store](https://apps.apple.com/us/app/mapify-ai-mind-map-summarizer/id6471925577)），与官网年付折算一致 | 输入类型最全，出图质量好 | **credits 消耗难预估**（有用户 20 分钟音频耗 91、14 分钟视频耗 220）；"试用期一开始就扣费"；PDF 失败、iOS 文字乱码（[Trustpilot](https://www.trustpilot.com/review/mapify.so)）；iOS 版 2025-12-15 后未再更新，美区仅 179 条评分（2026-09-26） |
-| **Google Gemini Notebook**（原 NotebookLM，2026-07-16 更名） | Web + iOS/Android（2025-05 上架），可在 Gemini App 内直接用 | 根据上传资料生成**可交互**导图，点主题直接追问；2026-07 起与 Gemini App 双向同步，新增可写代码的"云端电脑"（[Google](https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/)） | 免费；高级额度随 Google AI Plus（$4.99/月）/ Pro（$19.99/月）（[App Store](https://apps.apple.com/us/app/gemini-notebook/id6737527615)） | 免费、回答带出处；美区 4.9★/61,264 条（2026-09-26） | 只处理已有资料；导图编辑和导出有限（[9to5Google](https://9to5google.com/2025/03/27/notebooklm-mind-map/)、[XDA](https://www.xda-developers.com/notebooklms-mind-maps-were-useless-to-me-until-this-one-update-changed-everything/)） |
+| **Google Gemini Notebook**（原 NotebookLM，2026-07-16 更名） | Web + iOS/Android（2025-05 上架），可在 Gemini App 内直接用 | 根据上传资料生成**可交互**导图，点主题直接追问；截至 2026-07 已可在 Gemini App 内创建笔记本、两边双向同步（原记"2026-07 起"，2026-09-26 终稿核查更正：Google 博客写的是"already"，没说从何时开始），更名时新增可写代码的"云端电脑"（[Google](https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/)） | 免费；高级额度随 Google AI Plus（$4.99/月）/ Pro（$19.99/月）（[App Store](https://apps.apple.com/us/app/gemini-notebook/id6737527615)） | 免费、回答带出处；美区 4.9★/61,264 条（2026-09-26） | 只处理已有资料；导图编辑和导出有限（[9to5Google](https://9to5google.com/2025/03/27/notebooklm-mind-map/)、[XDA](https://www.xda-developers.com/notebooklms-mind-maps-were-useless-to-me-until-this-one-update-changed-everything/)） |
 | **Napkin AI** | 只有 Web | 选中文字 → 信息图、流程图、导图 | 免费（每周 500 credits）；Plus $9、Pro $22（[源](https://www.napkin.ai/pricing/)） | 视觉质量高；2025 年底注册用户超 500 万 | 无 App；只管"画出来"，不帮你"想清楚" |
 
 ### C. 画布、白板与视觉知识库
@@ -51,11 +53,11 @@
 |---|---|---|---|---|
 | **Miro** | 全平台 | 提示词 → 导图；便签聚类成主题；总结白板；Sidekicks、Flows | Starter $8/人/月（年付）起（[源](https://miro.com/pricing/)） | 为团队设计，手机上个人用太重 |
 | **Whimsical** | Web 为主 | AI 生成导图、流程图 | Pro $10/编辑者/月（年付；月付约 $12）（[源](https://whimsical.com/pricing)） | 快、好看；移动端缺位（美区 App Store 搜不到官方 App，2026-09-26） |
-| **Heptabase** | 全平台 | 带引用的 AI 研究助手、PDF OCR；2026-08-18 移动端加入 AI agent（[App Store](https://apps.apple.com/us/app/heptabase/id6445801508)） | Pro $11.99/月或 $107.88/年（≈$8.99/月）；Premium $23.99/月或 $215.88/年；Premium+ $71.99/月或 $647.88/年；无免费档，有 7 天试用（[官方 FAQ](https://support.heptabase.com/en/articles/12990121-pro-premium-and-premium-plans-pricing-faq)、[定价页](https://heptabase.com/pricing)）；iOS 无内购 | 深度学习人群口碑好；学习曲线陡；手机上白板基本只能看；2025-12 取消终身授权（三方） |
+| **Heptabase** | 全平台 | 带引用的 AI 研究助手、PDF OCR；2026-08-18 移动端加入 AI agent（[App Store](https://apps.apple.com/us/app/heptabase/id6445801508)） | Pro $11.99/月或 $107.88/年（≈$8.99/月）；Premium $23.99/月或 $215.88/年；Premium+ $71.99/月或 $647.88/年；无免费档，有 7 天试用（[官方 FAQ](https://support.heptabase.com/en/articles/12990121-pro-premium-and-premium-plans-pricing-faq)、[定价页](https://heptabase.com/pricing)）；iOS 无内购 | 深度学习人群口碑好；学习曲线陡；手机上白板基本只能看；2025-12 重做定价（12-05 的 v1.81.0 推出 Premium 档，[官方更新日志](https://wiki.heptabase.com/changelog/2025)），取消终身授权仍只见三方（[ToolChase](https://toolchase.com/tool/heptabase/)） |
 | **Allume**（原 Muse） | iPad/iPhone/Mac，本地优先 | **没有内置 AI**：v4.0 通过命令行工具提供 MCP 连接，让 Claude、ChatGPT 或本地模型读取、整理资料库，分关闭/只读/读写三档，默认关闭（[官方 memo](https://allume.com/memos/2026-07-allume-v4/)，页面署 2026-05-02；iOS v4.0 于 2026-06-17 上架）。原记"v4 加入 AI（细节待核实）"，2026-09 核实 | $9.99/月或 $99.99/年（[官网](https://allume.com/pricing)，App Store 内购一致） | 嵌套画布 + 手写；本地优先；小众 |
 | **Apple Freeform** | Apple 全平台，系统自带 | 无导图 AI；2026 年并入 Apple Creator Studio，订阅后可用 AI 生图、超分等（[App Store](https://apps.apple.com/us/app/freeform/id6443742539)） | 免费；Creator Studio $12.99/月或 $129/年（内购，不订阅也能建板、协作） | 免费、Pencil 体验好；没有结构、大白板会卡 |
 | **Milanote** | Web/iOS/桌面 | 未见明确 AI | iOS 内购 $12.49/月或 $119.99/年（≈$10/月）（[App Store](https://apps.apple.com/us/app/milanote/id1433852790)）；原记"$9.99/月（年付）"为约数 | 适合视觉整理，不是导图 |
-| **Taskade** | 全平台 | AI 生成导图分支后一键转任务；自建 Agent；2026-01 推出 Genesis（一句话生成可运行的 App）（[App Store](https://apps.apple.com/us/app/taskade-ai-apps-agents/id1264713923)） | 2026 年改为按 credits 计费，Pro $10/月（年付，含 10 人）起（[源](https://www.taskade.com/pricing)） | 导图能直接变任务；越来越臃肿、频繁改价 |
+| **Taskade** | 全平台 | AI 生成导图分支后一键转任务；自建 Agent；iOS 版 2026-01-14 引入 Genesis（一句话生成可运行的 App）（[App Store](https://apps.apple.com/us/app/taskade-ai-apps-agents/id1264713923)；原记"2026-01 推出"，2026-09-26 终稿核查更正：版本历史只能说明 iOS 端引入时间，Web 端首发时间未核实） | 2026 年改为按 credits 计费，Pro $10/月（年付，含 10 人）起（[源](https://www.taskade.com/pricing)） | 导图能直接变任务；越来越臃肿、频繁改价 |
 
 ### D. 论证与思维结构分析
 
@@ -83,11 +85,11 @@
 - **2024-08** Napkin AI 结束隐身，拿到 $10M，累计融资约 $19.5M。
 - **2025-03** NotebookLM 上线 Mind Map；**2025-05** 上架 iOS/Android（[MacRumors](https://www.macrumors.com/2025/05/20/google-releases-notebooklm-app-for-ios-and-android/)）。
 - **2025-09** MindNode 2025.6 版加入基于端侧 Apple Intelligence 的 AI 头脑风暴和"文档转摘要/博文"（[App Store 版本历史](https://apps.apple.com/us/app/mindnode-mind-map-outline/id6446116532)）。
-- **2025-12** Heptabase 重做定价，取消终身授权（三方）；Meta 收购 Limitless，Pendant 停售（[MLQ](https://mlq.ai/news/meta-acquires-ai-wearables-startup-limitless-ending-sales-of-pendant-device/)）。
+- **2025-12** Heptabase 重做定价，12-05 推出 Premium 档（[官方更新日志](https://wiki.heptabase.com/changelog/2025)），取消终身授权（三方，[ToolChase](https://toolchase.com/tool/heptabase/)）；Meta 收购 Limitless，Pendant 停售（[MLQ](https://mlq.ai/news/meta-acquires-ai-wearables-startup-limitless-ending-sales-of-pendant-device/)）。
 - **2026-02** Voicenotes Web 端上线"任意笔记一键生成导图"（02-17）（[Release notes](https://help.voicenotes.com/en/articles/9220745-release-notes)）。
 - **2026-03** Day One 推出 Gold（Daily Chat 等 AI 功能），原 Premium 改名 Silver（App Store 03-30 版）（[App Store](https://apps.apple.com/us/app/day-one-daily-journal-diary/id1044867788)）；Mindsera 上线语音通话模式（03-16）。
 - **2026-05** Muse 宣布更名 Allume（memo 署 05-02），iOS v4.0 于 06-17 上架；AI 只通过 MCP 外接，没有内置（[memo](https://allume.com/memos/2026-07-allume-v4/)）。原记"2026-07 发布带 AI 的 v4"，2026-09 更正。
-- **2026-06** Xmind 的"AI Labs"改名 Xmind AI，上线手绘转导图（06-04）；Mapify 新 Chat 可直接改图（06-26）（[博客](https://mapify.so/blog/new-mapify-chat-ai-mind-map-assistant)）；Voicenotes iOS 加入系统级听写键盘（06-25）。
+- **2026-06** Xmind 的"AI Labs"改名 Xmind AI，上线手绘转导图（06-04）；Mapify 新 Chat 可直接改图（06-26）（[博客](https://mapify.so/blog/new-mapify-chat-ai-mind-map-assistant)）；Voicenotes iOS 加入"在任意 App 里语音转文字"的听写（06-25；更新说明未写"键盘"，键盘形式为推断）。
 - **2026-07-16** NotebookLM 更名 **Gemini Notebook**，可在 Gemini App 内创建和访问、两端同步（[Google](https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/)）。
 - **2026-08** ideaShell（闪念贝壳国际版）2.0 上线 Agent 与全局记忆（08-18）（[App Store](https://apps.apple.com/us/app/ideashell-ai-thinking-partner/id6478199476)）；Goblin Tools iOS 2.0 原生重写、支持 Pro 账户同步（08-20）；Wispr Flow 完成 B 轮（08-17，见 §3.0）。
 - **2026-09** iOS 27 适配潮：Xmind、MindNode、Tiimo 都加了 Siri 建图/建任务；MindNode（09-01）、Whisper Memos（09-15）接入 MCP；Rosebud 09-30 取消免费版；Poised 宣布 10-08 关停（[官网](https://poised.com/)）。
@@ -103,7 +105,7 @@
 | [Xmind](https://apps.apple.com/us/app/xmind-ai-mind-map-brainstorm/id1286983622) | 4.8★/6,970 | 09-14 | Pro $10/月·$59/年；Premium $15/月·$99/年；仅移动端 $29.99/年 | 3 月图片转导图；6 月手绘转导图、AI Labs 改名 Xmind AI；9 月 iOS 27：Siri 建图、图片转导图改走端侧 Apple Intelligence |
 | [Mapify](https://apps.apple.com/us/app/mapify-ai-mind-map-summarizer/id6471925577) | 4.6★/179 | 2025-12-15 | Basic $9.99/月·$71.99/年；Pro $19.99/月·$143.99/年；Unlimited $29.99/月·$214.99/年 | iOS 端全年未更新；Web 端 6 月新 Chat 可直接改图 |
 | [MindNode](https://apps.apple.com/us/app/mindnode-mind-map-outline/id6446116532) | 4.6★/308 | 09-21 | Plus $2.99/月·$24.99/年 | （2025-09 起端侧 AI 头脑风暴）3 月文档链接；7 月放射布局、控制中心"开始头脑风暴"；9 月 MCP 接 AI 助手、iOS 27 Siri |
-| [SimpleMind](https://apps.apple.com/us/app/simplemind-mind-mapping/id305727658) | 4.5★/982 | 09-21 | 买断 $10.99 | 5 月背景图案、任务进度条；8 月大纲内搜索；仍无生成式 AI |
+| [SimpleMind](https://apps.apple.com/us/app/simplemind-mind-mapping/id305727658) | 4.5★/982 | 09-21 | 买断 $10.99 | 3 月背景图案、任务进度条（原记 5 月，2026-09-26 终稿核查更正：首见 03-30 的 2.9.0 版）；8 月大纲内搜索；仍无生成式 AI |
 | [MindMeister](https://apps.apple.com/us/app/mind-mapping-mindmeister/id381073026) | 4.4★/1,269 | 09-21 | Personal $7.49/月·$78/年；Pro $12.49/月·$125.99/年 | 9 月 iOS 27 视觉改版，其余为修复 |
 | [Ayoa](https://apps.apple.com/us/app/ayoa-mind-mapping/id770930267) | 4.6★/1,032 | 09-23 | $17/月·$155.99/年 | 只有修复类更新 |
 | [EdrawMind](https://apps.apple.com/us/app/edrawmind-ai-mind-map-notes/id1483705713) | 4.6★/205 | 01-26 | iOS 版 $9.99；全平台 $39/半年·$59/年；AI 点数另购 | 1 月首页改版、链接转导图，此后未更新 |
@@ -113,13 +115,13 @@
 | [Heptabase](https://apps.apple.com/us/app/heptabase/id6445801508) | 4.3★/70 | 09-23 | 无内购（官网 Pro $11.99/月·$107.88/年起） | 7 月后台录语音笔记；8 月移动端 AI agent；9 月收件箱、白板小地图 |
 | [Allume](https://apps.apple.com/us/app/allume-for-focused-thinking/id1501563902)（原 Muse） | 4.6★/336 | 07-06 | $9.99/月·$99.99/年 | 6 月 v4.0：更名、Liquid Glass、图片内文字可搜；AI 只走 MCP |
 | **语音捕捉** | | | | |
-| [Voicenotes](https://apps.apple.com/us/app/voicenotes-ai-notes-meetings/id6483293628) | 4.8★/7,001 | 09-25 | $8.99/周·$14.99/月·$99.99/年 | 2 月 Web 一键出导图、免费用户可录 3 场会议；3 月 MCP；6 月听写键盘；8 月实时转写 |
+| [Voicenotes](https://apps.apple.com/us/app/voicenotes-ai-notes-meetings/id6483293628) | 4.8★/7,001 | 09-25 | $8.99/周·$14.99/月·$99.99/年 | 2 月 Web 一键出导图、免费用户可录 3 场会议；3 月 MCP；4 月下线会议机器人（三方，见 §3.1）；6 月任意 App 内听写（键盘形式为推断）；8 月实时转写 |
 | [AudioPen](https://apps.apple.com/us/app/audiopen-ai-voice-to-text/id6502638001) | 4.7★/170 | 09-25 | Prime $11/月·$99/年（另见 $74.99 年档） | 5 月键盘 + Watch + 可全程端侧转写；7 月繁中键盘；9 月 Prime 可月付 |
 | [Cleft](https://apps.apple.com/us/app/cleft-for-verbal-thinkers/id6479458038) | 4.7★/69 | 07-03 | Plus $6.99/月·$39.99/年 | 2 月端侧转写提速（停录约 3 秒出稿）；5 月 CarPlay；6 月自定义写作风格和规则 |
 | [Whisper Memos](https://apps.apple.com/us/app/whisper-memos-speech-to-text/id6443658039) | 4.6★/416 | 09-22 | $8/周·$9.99/月·$69.99/年 | 5 月 Webhook、标签；8 月 v2.0 会议模式；9 月 MCP、可选多家转写模型 |
-| [Superwhisper](https://apps.apple.com/us/app/superwhisper-ai-dictation/id6471464415) | 4.4★/828 | 09-14 | Pro $8.49/月·$84.99/年·终身 $249.99 | 7 月端侧 Cohere 模型；8 月自研 S1 模型、Whisper 模型对所有人免费 |
+| [Superwhisper](https://apps.apple.com/us/app/superwhisper-ai-dictation/id6471464415) | 4.4★/828 | 09-14 | Pro $8.49/月·$84.99/年·终身 $249.99 | 7 月端侧 Cohere 模型；8 月推出新一代自研 S1 模型、Whisper 模型对所有人免费（原记"8 月自研 S1 模型"，2026-09-26 终稿核查更正：6 月更新说明已提到 S1） |
 | [Wispr Flow](https://apps.apple.com/us/app/wispr-flow-ai-voice-keyboard/id6497229487) | 4.8★/16,176 | 09-24 | Pro $15/月·$143.99/年；学生 $7.49/月 | 4 月续航优化、Notes；6 月被打断的听写自动保存 |
-| [Plaud](https://apps.apple.com/us/app/plaud-ai-note-taker/id6450364080) | 4.9★/22,899 | 09-16 | Pro $17.99/月·$99.99/年；Unlimited $29.99/月·$239.99/年；分钟包 | 4 月 Ask Plaud 出信息图；6 月 Skills；7 月 Team；8 月 Memory 个性化 |
+| [Plaud](https://apps.apple.com/us/app/plaud-ai-note-taker/id6450364080) | 4.9★/22,899 | 09-16 | Pro $17.99/月·$99.99/年；Unlimited $29.99/月·$239.99/年；分钟包 | 4 月 Ask Plaud 出信息图、支持 Skills；7 月 Team、Memory 个性化（原记"6 月 Skills、8 月 Memory"，2026-09-26 终稿核查按版本历史更正：Skills 首见 04-27 的 3.16.0，Memory 首见 07-22 的 3.26.0） |
 | [Granola](https://apps.apple.com/us/app/granola-ai-meeting-notes/id6739429409) | 5.0★/13,707 | 09-14 | 无内购（官网订阅） | 5 月 Chat 跨会议检索、会前 Briefs；7 月 Apple Watch |
 | **AI 日记 / 思考伙伴** | | | | |
 | [Rosebud](https://apps.apple.com/us/app/rosebud-ai-journal-diary/id6451135127) | 4.9★/3,297 | 09-25 | Bloom $12.99/月·$107.99/年；Thrive 2x $24.99/月、5x $59.99/月 | 1 月年度意图；5 月长时写作"正念铃"；9-30 取消免费版 |
@@ -132,7 +134,7 @@
 | [Speeko](https://apps.apple.com/us/app/speeko-ai-for-public-speaking/id1071468459) | 4.7★/4,697 | 09-16 | $24.99/月·$99.99/年 | 7 月课程内 AI 对话练习；9 月对练存为带反馈报告的 session |
 | [Orai](https://apps.apple.com/us/app/orai-improve-public-speaking/id1203178170) | 4.6★/3,694 | 09-02 | $12.99/月·$49.99/年·终身 $99.99 | 只有技术性更新 |
 
-**从快照能看出的三点**：① 导图大厂（Xmind、MindNode）在 iOS 27 上抢 Siri 和端侧模型，Mapify、EdrawMind 的 iOS 端基本停更——**"AI 导图"在 iOS 上的竞争点从"能生成"转到"系统级入口 + 端侧隐私"**；② MCP 成了独立 App 的新标配（MindNode、Allume、Voicenotes、Whisper Memos、ideaShell 都在 2026 年接入）；③ 语音类在向"键盘/听写"和"会议"两头扩张（Voicenotes、AudioPen 做键盘，Whisper Memos 做会议模式），没有一家往"追问 + 结构"走。
+**从快照能看出的三点**：① 导图大厂（Xmind、MindNode）在 iOS 27 上抢 Siri 和端侧模型，Mapify、EdrawMind 的 iOS 端基本停更——**"AI 导图"在 iOS 上的竞争点从"能生成"转到"系统级入口 + 端侧隐私"**；② MCP 成了独立 App 的新标配（MindNode、Allume、Voicenotes、Whisper Memos、ideaShell 都在 2026 年接入）；③ 语音类在向"键盘/听写"和"会议"两头扩张（AudioPen 做键盘，Voicenotes 做任意 App 内听写，Whisper Memos 做会议模式），没有一家往"追问 + 结构"走。
 
 ### 1.3 2025–26 新进入者
 
@@ -237,7 +239,7 @@ Napkin 注册用户超 500 万，说明"让别人看懂"是强需求；AudioPen�
    - Wispr Flow：2026-08 完成 B 轮 $280M，估值 $2B（[TechCrunch](https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/)）；
    - Granola：2026-03 完成 C 轮 $125M，估值 $1.5B（[SiliconANGLE](https://siliconangle.com/2026/03/25/granola-raises-125m-1-5b-valuation-ai-note-taking-app/)）；
    - Plaud：2026-06 软件 ARR 破 $1 亿，设备出货超 200 万台（[TechCrunch](https://techcrunch.com/2026/06/16/plaud-says-its-software-business-topped-100m-in-arr-after-shipping-over-2m-ai-notetakers/)）。
-   - 个人思考类大多是独立开发者的小生意（AudioPen 约 $15K MRR），或只到种子轮（Rosebud $6M）。
+   - 个人思考类大多是独立开发者的小生意（AudioPen 每月 $15K–20K，[IH 2026-02-17](https://www.indiehackers.com/post/tech/building-an-ai-tool-in-a-half-day-hackathon-and-hitting-20k-mo-BCloDTDRfjuip0pDghap)），或只到种子轮（Rosebud $6M）。
 3. **长期记忆很贵。** Rosebud 称新记忆系统"运行所需资源大得多"，2026-09-30 起**直接取消免费版**，老用户在 App 内拿专属优惠、条目可随时导出（[公告](https://help.rosebud.app/account/changes-to-the-free-plan)）。原记"改为按'每周 AI 预算'计量"，公告里没有这个说法，2026-09 更正；现行付费档是 Bloom $12.99/月或 $107.99/年，另有按用量倍数的 Thrive 2x（$24.99/月）、5x（$59.99/月）（[App Store](https://apps.apple.com/us/app/rosebud-ai-journal-diary/id6451135127)）。Mindsera 2026-04 也"重建了记忆系统"（[App Store](https://apps.apple.com/us/app/mindsera-ai-journal-diary/id6742319153)）。
 4. **独立可穿戴设备的终点往往是被收购或停服。** Meta 2025-12 收购 Limitless 后停售 Pendant，欧盟、英国等地停服（[MLQ](https://mlq.ai/news/meta-acquires-ai-wearables-startup-limitless-ending-sales-of-pendant-device/)）；Bee 被 Amazon 收购。启示：用 Apple Watch、操作按钮、锁屏小组件充当"准硬件"入口，并承诺数据可导出。
 5. **避免"AI 替你想"的主流做法：问题优先、原话优先、成品归用户。** Rosebud"帮你找到自己的答案，而不是给建议"；Day One 把对话转成"你的日记"；Tiimo"结构应该支撑你的思考，而不是取代它"。
@@ -249,8 +251,8 @@ Napkin 注册用户超 500 万，说明"让别人看懂"是强需求；AudioPen�
 
 | 产品 | 怎么处理"乱说一通" | 价格 | 信号 |
 |---|---|---|---|
-| **AudioPen** | 删口水话，再按"风格"重写（清晰简洁、正式邮件、备忘录、要点、讲给孩子……），可学你的文风（[官网](https://www.audiopen.ai/)）；2026-05 起有键盘和 Watch 版，可全程端侧转写 | 官网 Prime 通行证：3 个月 $33、1 年 $99、2 年 $159（[官网](https://www.audiopen.ai/)）；iOS 2026-09-01 起可订阅 Prime $11/月或 $99/年（[App Store](https://apps.apple.com/us/app/audiopen-ai-voice-to-text/id6502638001)） | 独立开发者半天做出来，前 2 个月收入 $73K，之后约 $15K MRR（[IndieHackers](https://www.indiehackers.com/post/louis-pereira-s-journey-from-idea-to-15k-month-with-audiopen-eda6e4c6e4)） |
-| **Voicenotes** | 一条录音转成摘要/待办/博客草稿；"Ask My AI"对全部历史提问；MCP server 2026-03-25 公开；**2026-02-17 起 Web 端任意笔记一键生成导图**（[Release notes](https://help.voicenotes.com/en/articles/9220745-release-notes)） | iOS 内购 $14.99/月、$99.99/年（另有 $8.99/周、$89.99/年档）（[App Store](https://apps.apple.com/us/app/voicenotes-ai-notes-meetings/id6483293628)） | 原记"2026-04 主动下线会议机器人"，官方 Release notes（更新至 2026-05-22）未见此条（待核实）。能看到的是在**加码**会议和听写：免费用户可录 3 场会议（2026-02-14）、会议/笔记自动识别（2026-03-18），iOS 上的名字就叫"Voicenotes AI Notes & Meetings"，2026-06 加入系统级听写键盘——**个人语音笔记在往会议、听写两头扩，"录音 → 导图"也只是其中一个按钮** |
+| **AudioPen** | 删口水话，再按"风格"重写（清晰简洁、正式邮件、备忘录、要点、讲给孩子……），可学你的文风（[官网](https://www.audiopen.ai/)）；2026-05 起有键盘和 Watch 版，可全程端侧转写 | 官网 Prime 通行证：3 个月 $33、1 年 $99、2 年 $159（[官网](https://www.audiopen.ai/)）；iOS 2026-09-01 起可订阅 Prime $11/月或 $99/年（[App Store](https://apps.apple.com/us/app/audiopen-ai-voice-to-text/id6502638001)） | 独立开发者半天做出来，前 2 个月收入 $73K，之后约 $15K MRR（[IndieHackers](https://www.indiehackers.com/post/louis-pereira-s-journey-from-idea-to-15k-month-with-audiopen-eda6e4c6e4)）；2026-02-17 访谈为每月 $15K–20K（[IH](https://www.indiehackers.com/post/tech/building-an-ai-tool-in-a-half-day-hackathon-and-hitting-20k-mo-BCloDTDRfjuip0pDghap)） |
+| **Voicenotes** | 一条录音转成摘要/待办/博客草稿；"Ask My AI"对全部历史提问；MCP server 2026-03-25 公开；**2026-02-17 起 Web 端任意笔记一键生成导图**（[Release notes](https://help.voicenotes.com/en/articles/9220745-release-notes)） | iOS 内购 $14.99/月、$99.99/年（另有 $8.99/周、$89.99/年档）（[App Store](https://apps.apple.com/us/app/voicenotes-ai-notes-meetings/id6483293628)） | **2026-04 下线会议机器人和日历集成，会议改为只在本机录制、不再有机器人代为进会**（三方：[The Rundown](https://www.therundown.ai/tools/voicenotes)；官方帮助文章"Meeting bot and calendar integration: what's changing"被搜索引擎收录，2026-09-26 打开已 404；Release notes 更新至 2026-05-22，未单列此条）。第二轮曾改标"(待核实)"，2026-09-26 终稿核查恢复。下线的是"替你进会"的机器人，会议功能本身在**加码**：免费用户可录 3 场会议（2026-02-14）、会议/笔记自动识别（2026-03-18），iOS 上的名字就叫"Voicenotes AI Notes & Meetings"，2026-06 加入系统级听写——**个人语音笔记在往会议、听写两头扩，"录音 → 导图"也只是其中一个按钮** |
 | **Cleft Notes** | "给靠说来想事的人"；手机本地转写，音频不离设备；写入 Obsidian；2026-06 起每条可选"整理/逐字/自定义风格" | Plus $6.99/月或 $39.99/年（[定价](https://cleftnotes.com/pricing)，App Store 内购一致） | The Sweet Setup："我不知道自己需要的思考伙伴"；美区仅 69 条评分（2026-09-26） |
 | **Whisper Memos** | 锁屏、表盘、Siri、操作按钮一键开录；自动分段、摘要、发邮箱；2026-08 v2.0 加会议模式，2026-09 加 MCP | $9.99/月、$69.99/年（另有 $8/周）（[App Store](https://apps.apple.com/us/app/whisper-memos-speech-to-text/id6443658039)、[官网](https://whispermemos.com/)） | 系统入口吃满的样板 |
 | **Superwhisper** | 系统级听写，按当前 App 自动切换"模式"（邮件/消息/笔记） | Pro $8.49/月、$84.99/年、终身 $249.99（[App Store](https://apps.apple.com/us/app/superwhisper-ai-dictation/id6471464415)）；2026-08-26 起 Whisper 模型对所有人免费 | 无外部融资 |
@@ -272,7 +274,7 @@ Napkin 注册用户超 500 万，说明"让别人看懂"是强需求；AudioPen�
 | **Day One Gold**（App Store 2026-03-30 上线） | **Daily Chat**：先聊完这一天，再转成保留你原话和心情的日记；**Go Deeper** 追问可在 Apple Intelligence 本地运行（[9to5Mac](https://9to5mac.com/2026/04/08/day-one-journaling-app-introduces-gold-plan-with-ai-summaries-and-daily-chat/)）；2026-08 Daily Chat 加语音模式（[App Store](https://apps.apple.com/us/app/day-one-daily-journal-diary/id1044867788)） | $74.99/年（原 Premium 改名 Silver：$8.99/月、$49.99/年） |
 | **Untold** | 语音优先，每条都生成追问，随时间显示反复出现的主题；加密、默认不训练 | $12.99/月或 $107.99/年（[App Store](https://apps.apple.com/us/app/untold-voice-journal/id6451427834)）；美区 4.9★/2,215 条 |
 | **How We Feel** | 耶鲁情绪智力中心出品，**四色情绪矩阵 + 144 个情绪词**帮你准确说出感受；免费（非营利） | 免费（无内购） |
-| **Stoic / Reflection / Life Note** | 早晚节奏、"治疗前准备"模板、"问你的日记"、导师人格 | $40–100/年不等：Stoic 高级版 $39.99 起、AI 档 $69.99–99.99（周期未标）；Reflection $47.99–69/年；Life Note $99.99/年（App Store 内购）。原记"$48–70/年"，2026-09 更正 |
+| **Stoic / Reflection / Life Note** | 早晚节奏、"治疗前准备"模板、"问你的日记"、导师人格 | 年费约 $40–100：Stoic 高级版多档 $6.99–$39.99、AI 档 $12.99–$99.99（周期未标，另有终身 $299）；Reflection $47.99–69/年；Life Note $10.99/月、$99.99/年（App Store 内购）。原记"$48–70/年"，2026-09 更正；Stoic 原写"高级版 $39.99 起、AI 档 $69.99–99.99"，2026-09-26 终稿核查按内购表更正（[Stoic](https://apps.apple.com/us/app/id1312926037)、[Reflection](https://apps.apple.com/us/app/id1504547616)、[Life Note](https://apps.apple.com/us/app/id6740916037)） |
 
 **可以直接拿来用的对话原则**：只问不答 · 一次只问一个 · 先复述再追问 · 对话只是过程，成品归用户 · 框架只当脚手架 · 换个视角再问一遍 · 看长期规律 · 本地处理与加密。
 
@@ -294,7 +296,7 @@ Napkin 注册用户超 500 万，说明"让别人看懂"是强需求；AudioPen�
 ### 3.4 ADHD / 神经多样性工具
 
 - **Goblin Tools**：一组各管一件事的小工具——Magic ToDo（"辣度"滑杆决定拆多细）、Compiler（把脑内倾倒变成行动清单）、Formalizer（调语气）、**Judge（判断一条消息的语气和意图——"这样说会不会太冲？"）**、Consultant（比较选项）（[官网](https://goblin.tools/)）。网页版免费，靠 TikTok 和 Reddit 口碑走红。iOS 版 $1.99 下载，2026-08-20 发布 2.0 原生重写，支持 Pro 账户全量同步（Pro $3.99/月或 $39.99/年）；美区 4.8★/3,014 条（[App Store](https://apps.apple.com/us/app/goblin-tools/id6449003064)）。
-- **Tiimo**：打字或直接说出所有事，AI 拆成带预估时长的步骤放进可视化时间轴。Apple 2025 年度 iPhone App，用户 100 万+（[产品页](https://www.tiimoapp.com/product/ai-planning)）。
+- **Tiimo**：打字或直接说出所有事，AI 拆成带预估时长的步骤放进可视化时间轴。Apple 2025 年度 iPhone App；官网称"超过 50 万人在用"（[官网](https://www.tiimoapp.com/)），App Store 描述称下载 400 万+（[App Store](https://apps.apple.com/us/app/tiimo-to-do-list-planner/id1480220328)）。原记"用户 100 万+（产品页）"，2026-09-26 终稿核查时产品页已无此数字，按官网和 App Store 更正。
 - **ADHD Notes 等**：把一团乱分进"现在做 / 以后做 / 放下"三个筐，每个筐只给一个下一步。
 
 **交互原则**：一个控件调粒度 · 整理交给 AI，用户只勾选拖动 · 只给一个下一步 · 允许"放下" · 让时间看得见 · 输入前不要让用户选分类。**Apple 编辑偏爱温和、低压力、可视化的设计——这是可以争取的推荐渠道。**
