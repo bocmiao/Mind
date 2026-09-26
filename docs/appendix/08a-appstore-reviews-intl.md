@@ -222,7 +222,7 @@ AI 日记类低星里约 22% 涉及提问或分析（人工 20 条）。但在�
 - **Q51**「With phones containing gigabytes of storage I don’t see why it’s not possible to offer service like this and not send any data back to the developer.」——Orai · 4★ · ca · 2020-08-02（[源](https://apps.apple.com/ca/app/id1203178170?see-all=reviews)）
   意译：手机有几十 GB 存储，不明白为什么不能做到不把任何数据传回开发者。
 
-**对我们的启示**：L「端侧优先」（P1）和「私密导图」（P1）应写进 App Store 描述的第一屏。不做需要"完全访问"的键盘扩展。支持"通过 Apple 登录"或免登录使用。隐私营养标签如实填写，并明确写"不用于训练"。
+**对我们的启示**：L「端侧优先」（P1；2026-09-26 已升为 P0，见 [07 §0](../07-compliance-business-roadmap.md)）和「私密导图」（P1）应写进 App Store 描述的第一屏。不做需要"完全访问"的键盘扩展。支持"通过 Apple 登录"或免登录使用。隐私营养标签如实填写，并明确写"不用于训练"。
 
 ### 2.12 P10 ADHD 与神经多样性
 

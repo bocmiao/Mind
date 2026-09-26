@@ -5,6 +5,8 @@
 > 2026-09-26 第二轮核实：§3.1 各项已逐条对照 Apple 文档、WWDC26 视频、Newsroom 和支持页面，**全部成立**，并补上资格细则、API 名称和限制；国行 Apple Intelligence 状态已确认（未开放）；SpeechTranscriber 的中文支持有第三方实测佐证，语音方案主线不变。新增 §3.4 语音转写路由、§3.5 可纳入计划的系统能力，§8 新增 4 项风险。同日并入已核查附录：[06a](appendix/06a-cn-tech-stack.md) 的中国版任务路由、云端 ASR 厂商与价格、内容审核、端侧小模型实测与合规、各厂商结构化输出约束（§3.2、§3.4、§4.2）；[07a §12](appendix/07a-overseas-compliance.md) 与 [08 §2.1–2.2](08-user-voices.md) 的音频保留、情绪用词边界、危机检测、AI 身份披露与使用时长提醒、年龄段 API（§6）；§8 再增 5 项风险。
 >
 > 2026-09-26 终稿核查：逐条重开 Apple 文档 JSON、PCC 资格页、支持页、Newsroom、网信办原文与阿里 / 腾讯 / 火山 / 讯飞价格页复核 38 条，更正 4 处（PCC 下载门槛口径、Gemini 接入的 API 名、§3.1 大陆一段残留的"登记"、腾讯跨境倍数），其余成立。
+>
+> **2026-09-26 阶段决定**（[07 §0](07-compliance-business-roadmap.md)）：现阶段只做海外版，AI 只用 Apple 端侧模型和 PCC，不接云端模型、不自建后端网关；中国版一列、云端大模型和网关暂缓，保留作以后参考。具体做法见 §3.2 末尾"当前阶段"。
 
 ---
 
@@ -17,8 +19,8 @@
 | 导图渲染 | **原生自研**（方案 A）；需要极速验证时可临时用 WebView（方案 B） | 见第 2 节 |
 | 存储与同步 | **SQLiteData 或 GRDB + CKSyncEngine**；以后需要协作再引入 Loro | 树结构用关系表最可控；SwiftData 的 to-many 无序，还有 CloudKit 约束 |
 | 语音转写 | **SpeechTranscriber**（端侧）→ DictationTranscriber → sherpa-onnx / FluidAudio（Paraformer、Qwen3-ASR 等）→ 云端 ASR 兜底 | 免费、离线、带时间戳（可"点节点回放原声"）【官】；中文 locale 目前只有一篇第三方文章列出（LoroNote，调用 `supportedLocales` 所得，未测中文字错率；2026-09-26 终稿核查改写，原写"有第三方实测佐证"），仍以首周 CER 测试定默认方案（见 §3.4） |
-| LLM | **按地区和任务路由**：端侧 Foundation Models / Apple PCC / 自有后端代理的云模型 | 见第 3 节 |
-| 后端 | 轻量 Serverless 网关：鉴权、限流、订阅校验、模型路由、内容审核 | API Key 绝不放客户端；中国版合规必需 |
+| LLM | **按地区和任务路由**：端侧 Foundation Models / Apple PCC / 自有后端代理的云模型。**现阶段只用前两项**（2026-09-26，§3.2 末尾） | 见第 3 节 |
+| 后端 | 轻量 Serverless 网关：鉴权、限流、订阅校验、模型路由、内容审核。**现阶段不建**：不收费、不接云端模型，数据只在设备、用户自己的 iCloud 和 PCC（2026-09-26） | API Key 绝不放客户端；中国版合规必需 |
 | 检索 | 端侧 embedding + 暴力余弦 + FTS5 | 单用户数据量小，不需要向量数据库 |
 
 ---
@@ -38,8 +40,8 @@ flowchart TB
     end
     subgraph Cloud["云端"]
         PCC["Apple PCC 模型<br/>（iOS 27，海外）"]
-        GW["自有 AI 网关<br/>鉴权 · 限流 · 计费 · 审核 · 标识"]
-        LLMc["云端大模型<br/>国内：已备案模型<br/>海外：Claude / Gemini / GPT"]
+        GW["自有 AI 网关（暂缓）<br/>鉴权 · 限流 · 计费 · 审核 · 标识"]
+        LLMc["云端大模型（暂缓）<br/>国内：已备案模型<br/>海外：Claude / Gemini / GPT"]
         CK[("iCloud / CloudKit")]
     end
     Cap --> ASR --> Orc
@@ -137,9 +139,24 @@ flowchart TB
 
 任何一项不满足就降级到下一层。**导图编辑、端侧转写等非 AI 能力在所有机型上都可用**，AI 是增值层。
 
+**当前阶段：只用 Apple 的模型（2026-09-26，[07 §0](07-compliance-business-roadmap.md)）**
+
+| 任务 | 现在用什么 |
+|---|---|
+| 去口水词、切段、节点起标题、打标签、边说边长、一次一问的追问 | 端侧 Foundation Models |
+| 停顿后整体整理、成稿、每周回顾等长任务 | PCC（iOS 27）；上表海外版里"云端大模型"的活改由 PCC 承担 |
+| 跨导图关联 | 端侧 `NLContextualEmbedding` + 端侧模型判断关系 |
+| 设备不支持 Apple 智能 | 隐藏 AI 功能，只提供不用 AI 的部分（转写、手动整理、回听原话、导出） |
+
+- **可用性**：按上面的"能力探测"判断。端侧模型不可用时不显示 AI 入口；PCC 不可用、超额或断网时退回端侧，只做短任务。PCC 额度快用完时，框架提供系统界面引导用户升级 iCloud+（[源](https://developer.apple.com/documentation/foundationmodels/adding-server-side-intelligence-with-private-cloud-compute)）【官】。
+- **安全护栏误拦**：用户倒出来的内容常带情绪，Apple 模型的护栏可能拦下。整理、归纳这类改写任务，创建 `SystemLanguageModel` 时传 `guardrails: .permissiveContentTransformations`：生成 `String` 时不抛护栏错误，但模型仍可能回一句拒绝；生成其他类型（如 `@Generable` 结构）时和默认模式一样会抛错（[源](https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel/guardrails/permissivecontenttransformations)）【官】。做法（推断）：先用 `String` 做整理，再转成导图操作；捕获护栏错误和拒绝文字，退回"保留原话、让用户自己整理"。PCC 也有护栏，但策略开发者不能配置；Apple 也提醒，内置的两层安全机制之外，App 要按自己的场景再加一层（[源](https://developer.apple.com/documentation/foundationmodels/improving-the-safety-of-generative-model-output)）【官】，对应 §6 的危机检测管线。
+- **为什么不接云端模型**：Claude、OpenAI、Gemini 的 API 服务地区都不含中国大陆和香港；阿里云国际站要用中国内地以外的手机号注册；改用国内模型，等于把海外用户的内容传回大陆（推断）。来源见 [07 §0](07-compliance-business-roadmap.md)。
+- **测试设备**：非国行、Apple 账户地区不是大陆的 iPhone 15 Pro 或 iPhone 16 及以后，iOS 27（[07 §0](07-compliance-business-roadmap.md)）；Xcode 模拟器跑 Foundation Models 要求 Mac 本身开启 Apple 智能（[Apple 工程师回复](https://developer.apple.com/forums/thread/815397)）。
+- **以后照顾老机型**：可评估经 `MLXLanguageModel` 在本机跑 Apache-2.0 的 Qwen3 小模型（速度、发热见上文）；模型文件可放在 Apple 托管的后台资源里，每个开发者账号含 200 GB（[WWDC25](https://developer.apple.com/wwdc25/guides/games/)）。暂不做。
+
 ### 3.3 统一抽象
 
-- iOS 27+：用 `LanguageModel` 协议把国产模型或自有网关包装成 Provider，同一套会话代码在端侧 / PCC / 云端之间切换。海外版接 Claude 时用官方包的 `.proxied` 模式指向自有网关，客户端不放 Key，与"后端"一行的原则一致。
+- iOS 27+：用 `LanguageModel` 协议把国产模型或自有网关包装成 Provider，同一套会话代码在端侧 / PCC / 云端之间切换。海外版接 Claude 时用官方包的 `.proxied` 模式指向自有网关，客户端不放 Key，与"后端"一行的原则一致。（暂缓：Claude 的 API 服务地区不含中国大陆和香港，见 §3.2 末尾。）
 - iOS 26：自建一个 Provider 协议，形状对齐 `LanguageModel`，将来平滑迁移。
 - `@Generable` 结构在云端映射为 JSON Schema（结构化输出）；国内各厂商的支持范围不同，见 §4.2"各厂商约束"。
 
@@ -443,3 +460,5 @@ AI 质量是这个产品的生命线，从第一天就要有评估集。
 | 按次计费的审核随调用频率放大（新增） | 逐句送审（假设每月 3,600 次）每月 ¥5.4–9.0，超过模型费（计算，§3.2）；按停顿批量送审，本地关键词库做第一道（推断） |
 | 端侧推理发热降速（新增） | iPhone 17 Pro 上 Gemma 4 E2B 持续推理，MLX 约 60 秒内吞吐掉过一半（[源](https://github.com/john-rocky/apple-silicon-llm-bench/blob/61e243f9291f63c7576ce68205d2c759bc411ca7/README.md)）；端侧只做短任务，长任务走网关 |
 | 云 ASR 资源包用完即停服（新增） | 腾讯"自2022年5月起，所有开通服务的新用户默认关闭后付费"，后付费关闭时"预付费额度耗尽后会自动停服"（[源](https://cloud.tencent.com/document/product/1093/35686)）；火山后付费要"确保账号里面有一定的余额"（[源](https://www.volcengine.com/docs/6561/1359369)）→ 上线前开通后付费、保持余额并设用量告警；停服时自动退回端侧转写（推断） |
+| Apple 模型的安全护栏误拦带情绪的内容（2026-09-26 新增） | 整理类任务用 `permissiveContentTransformations` 生成 `String`，再转成导图操作；捕获护栏错误和拒绝文字，退回"保留原话"；评估集（§7）加入带情绪的样本，统计误拦率（§3.2 末尾） |
+| 只有支持 Apple 智能的设备能用 AI（2026-09-26 新增） | 不用 AI 的部分要单独站得住；阶段 0 统计参与者机型（[09 §1](09-validation-kit.md)）；以后评估 MLX 小模型（§3.2 末尾） |
