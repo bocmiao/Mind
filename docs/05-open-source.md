@@ -7,6 +7,8 @@
 > - **适配度**：按"闭源商业 iOS App + 本项目功能"打分，满分 5★；A = 原生 SwiftUI 方案，B = WKWebView 方案（见 [06-技术方案](06-tech-architecture.md)）。
 >
 > 2026-09-26 第二轮核实：新增 ✓ 约 50 处；更正 4 处（AFFiNE 有 EE 目录例外；Freeplane、MindForger 为 GPL-2.0-or-later；SenseVoiceSmall 权重不是 Apache-2.0 而是 FunASR 模型协议；Whisper 权重在 HF 各卡片标注不一）；新发现：simple-mind-map 已进入低维护状态、FluidAudio 已内置中文 SenseVoice/Paraformer、Qwen3-ASR（Apache-2.0）可经 sherpa-onnx 端侧运行。
+>
+> 2026-09-26 终稿核查：逐条重开来源（仓库 LICENSE、npm / crates / PyPI、HF / ModelScope 元数据、Apple 文档 JSON）复核 34 条，更正 5 处（SpeechTranscriber 第三方来源的描述、`tokenCount(for:)` 系统要求、PCC 下载门槛口径、Gemini 接入的 API 名、VecturaKit 的 `MLXEmbedder`），补充 1 处（AFFiNE EE 条款的 MPL-2.0 例外）。
 
 ---
 
@@ -20,7 +22,7 @@
 3. **tldraw 不是开源许可**：生产环境必须有 license key，商用必须买商业许可，没有 key 的生产环境会在 5 秒后停止渲染（已从 5.4.2 随包文档核实）。
 4. **带导图或 AI 的开源 PKM 应用几乎都是 AGPL/GPL**（思源、Logseq、AppFlowy、Khoj、Reor、Trilium、Freeplane、MindForger）——**只能学产品设计，代码不能进闭源 App**。AFFiNE 虽以 MIT 为主，但后端目录是企业版许可。
 5. **AI → 导图的通行做法**：用 Markdown/缩进文本作中间格式（流式、容错好）；修改已有导图时用**"原子操作 + 稳定节点 ID"**，不整图重新生成。
-6. **端侧 AI**：语音首选系统 SpeechTranscriber（Apple 文档未列 locale，两篇第三方实测称含简体/繁体/香港中文与粤语），中文兜底用 sherpa-onnx（Paraformer / SenseVoice / Qwen3-ASR）、FluidAudio（SenseVoice / Paraformer 的 Core ML 版）或 WhisperKit；LLM 用 Foundation Models 做小任务，iOS 27 新增的 PCC 32K 模型和 `LanguageModel` 协议（均已从 Apple 文档核实）是今年最大的变量。
+6. **端侧 AI**：语音首选系统 SpeechTranscriber（Apple 文档未列 locale；LoroNote 2026-08-23 列出简体、繁体、香港中文与粤语 locale，addpipe 只写支持中文、粤语，均无中文字错率，见第 5 节），中文兜底用 sherpa-onnx（Paraformer / SenseVoice / Qwen3-ASR）、FluidAudio（SenseVoice / Paraformer 的 Core ML 版）或 WhisperKit；LLM 用 Foundation Models 做小任务，iOS 27 新增的 PCC 32K 模型和 `LanguageModel` 协议（均已从 Apple 文档核实）是今年最大的变量。
 7. **同步**：单人多设备用 SQLiteData / GRDB + CKSyncEngine；要多人协作或"思路演变回放"时引入 **Loro**（原生支持可移动的树 CRDT）。
 8. **模型权重许可要单独看**：SenseVoiceSmall 走 FunASR 模型协议（须署名、保留模型名，阿里可单方修订）；Paraformer-zh、Qwen3-ASR、Qwen3 小模型为 Apache-2.0；Whisper 为 MIT。
 
@@ -61,7 +63,7 @@
 
 | 名称 | License | 最值得学的 |
 |---|---|---|
-| **AFFiNE** | **根目录 MIT，但 `packages/backend` 与 `packages/common/native` 两个目录适用 AFFiNE Enterprise Edition License**：生产使用须有 EE 订阅，禁止复制、分发、再许可（开发测试除外）✓（[源](https://github.com/toeverything/AFFiNE/blob/canary/LICENSE)、[EE 条款](https://github.com/toeverything/AFFiNE/blob/canary/packages/backend/server/LICENSE)）；BlockSuite（@blocksuite/affine 0.22.4）MIT ✓。原记"EE 部分另计，待核实" | 文档 ⇄ 白板 ⇄ 导图一键互转 |
+| **AFFiNE** | **根目录 MIT，但 `packages/backend` 与 `packages/common/native` 两个目录适用 AFFiNE Enterprise Edition License**：生产使用须有 EE 订阅，禁止复制、分发、再许可（开发测试除外）✓；EE 条款另写明，其中随社区版（CE）分发或在客户端下发的部分按 MPL-2.0（2026-09-26 终稿核查补充）（[源](https://github.com/toeverything/AFFiNE/blob/canary/LICENSE)、[EE 条款](https://github.com/toeverything/AFFiNE/blob/canary/packages/backend/server/LICENSE)）；BlockSuite（@blocksuite/affine 0.22.4）MIT ✓。原记"EE 部分另计，待核实" | 文档 ⇄ 白板 ⇄ 导图一键互转 |
 | **思源 SiYuan** | AGPL-3.0 | 块引用 / 反链 → 导图节点被别的导图引用，形成跨图连接 |
 | **Logseq** | AGPL-3.0 | 大纲 ⇄ 白板，任何块可被引用 |
 | **AppFlowy** | AGPL-3.0 | Rust 核心 + 多端 UI 架构 |
@@ -101,16 +103,16 @@
 
 | 名称 | 做什么 | License | 适配度 | 要点 |
 |---|---|---|---|---|
-| **SpeechAnalyzer / SpeechTranscriber**（iOS 26+ ✓） | 系统级端侧长语音转写 | Apple SDK | ★★★★★ | 免费、离线、不占包体：模型由 `AssetInventory` 从 Apple 服务器下载、系统管理并跨 App 共享，每个 App 可预留的 locale 数有上限，久不使用可能被系统回收（[源](https://developer.apple.com/documentation/speech/assetinventory)）；带时间戳（`audioTimeRange`）✓（[源](https://developer.apple.com/documentation/speech/speechtranscriber/preset)）；设备不支持时 `supportedLocales` 为空，官方建议改用 DictationTranscriber（[源](https://developer.apple.com/documentation/speech/speechtranscriber)）。**中文**：Apple 文档未列 locale；两篇第三方实测（2026-08）称 `supportedLocales` 含简体、繁体、香港中文和粤语（[LoroNote 2026-08-23](https://loronote.com/en/blog/apple-speechanalyzer-vs-whisper)、[addpipe 2026-08-17](https://blog.addpipe.com/apple-speechanalyzer-api/)），均未给中文字错率——**仍需真机确认并测 CER** |
+| **SpeechAnalyzer / SpeechTranscriber**（iOS 26+ ✓） | 系统级端侧长语音转写 | Apple SDK | ★★★★★ | 免费、离线、不占包体：模型由 `AssetInventory` 从 Apple 服务器下载、系统管理并跨 App 共享，每个 App 可预留的 locale 数有上限，久不使用可能被系统回收（[源](https://developer.apple.com/documentation/speech/assetinventory)）；带时间戳（`audioTimeRange`）✓（[源](https://developer.apple.com/documentation/speech/speechtranscriber/preset)）；设备不支持时 `supportedLocales` 为空，官方建议改用 DictationTranscriber（[源](https://developer.apple.com/documentation/speech/speechtranscriber)）。**中文**：Apple 文档未列 locale；LoroNote（2026-08-23）称 `supportedLocales` 返回 42 个 locale，含简体、繁体、香港中文和粤语（[源](https://loronote.com/en/blog/apple-speechanalyzer-vs-whisper)），addpipe（2026-08-17）只写"发布时支持粤语、中文"等 10 种语言（[源](https://blog.addpipe.com/apple-speechanalyzer-api/)）；两篇都没有中文字错率（LoroNote 的 WER 测试只测英文）——**仍需真机确认并测 CER**（2026-09-26 终稿核查更正：原记"两篇第三方实测均称含简体、繁体、香港中文和粤语"，addpipe 并未列出这些细分 locale，也不是实测） |
 | DictationTranscriber（iOS 26+ ✓） | 与系统听写 / 端侧 SFSpeechRecognizer 同一套模型，兼容旧设备 | Apple SDK | ★★★★☆ | SpeechTranscriber 不可用时的官方替代；支持 `contextualStrings` 偏置和自定义词表（`SFSpeechLanguageModel`）；不支持仅能联网识别的语言（[源](https://developer.apple.com/documentation/speech/dictationtranscriber)）；中文可用性需真机确认 |
 | **WhisperKit**（argmaxinc，仓库已更名 argmax-oss-swift） | Whisper 的 Core ML 实现，流式 + 词级时间戳 | MIT ✓（[源](https://github.com/argmaxinc/WhisperKit/blob/main/LICENSE)）；Core ML 权重 MIT ✓（[源](https://huggingface.co/argmaxinc/whisperkit-coreml)） | ★★★★☆ | 多语言兜底；iOS 16+；同一 Swift 包还含 SpeakerKit（pyannote 说话人分离）、TTSKit（Qwen3-TTS）；带说话人的实时转写、自定义词表等在收费的 Argmax Pro SDK（[源](https://github.com/argmaxinc/WhisperKit/blob/main/README.md)）；模型数百 MB 到 1GB+，需按需下载 |
 | **sherpa-onnx** | 端侧语音全家桶：ASR（Paraformer、SenseVoice、Qwen3-ASR、FireRedASR 等）、VAD、标点、说话人分离 | 代码 Apache-2.0 ✓（[源](https://github.com/k2-fsa/sherpa-onnx/blob/master/LICENSE)）；**模型权重各有许可** | ★★★★☆（中文） | 中文识别与标点、"边说边出字"；已提供 SPM `Package.swift`（iOS 15+）；仓库含 Qwen3-ASR 的 C/C++ API 示例（`c-api-examples/qwen3-asr-c-api.c`） |
 | whisper.cpp | C/C++ Whisper | MIT ✓（[源](https://github.com/ggml-org/whisper.cpp/blob/master/LICENSE)） | ★★★☆☆ | 量化小模型 |
 | **FluidAudio** | Swift 端侧 ASR、说话人分离、VAD、TTS（Core ML，跑在神经引擎上） | Apache-2.0 ✓（[源](https://github.com/FluidInference/FluidAudio/blob/main/LICENSE)） | ★★★★☆（中文，推断；原★★★☆☆） | iOS 17+；**已内置 SenseVoice 与 Paraformer 的 Core ML 版用于普通话**（[源](https://github.com/FluidInference/FluidAudio/blob/main/README.md)）；权重许可随上游：SenseVoice Core ML 版沿用上游许可（[源](https://huggingface.co/FluidInference/SenseVoice-Small-coreml)），Parakeet 为 CC-BY-4.0（[源](https://huggingface.co/FluidInference/parakeet-tdt-0.6b-v3-coreml)）；多人录音的说话人分离 |
 | **Qwen3-ASR**（0.6B / 1.7B，2026-01） | 通义开源 ASR：30 种语言 + 22 种中文方言，含语种识别；另有强制对齐模型做时间戳 | 权重 Apache-2.0 ✓（[源](https://huggingface.co/Qwen/Qwen3-ASR-0.6B)） | ★★★☆☆（推断） | 可经 sherpa-onnx 端侧运行；iPhone 上的速度、内存和包体需实测 |
-| **Foundation Models**（iOS 26+） | 端侧 LLM：引导生成、工具调用、流式 | Apple SDK | ★★★★★ | 零成本做追问、改写、分类；每会话上下文 4,096 token（中文约一字一 token）✓（[源](https://developer.apple.com/documentation/foundationmodels/managing-the-context-window)）；`contextSize`、`tokenCount(for:)` 可运行时读取（iOS 26.4 加入并回溯部署）；支持语言即 Apple Intelligence 语言，**含简体、繁体中文** ✓（[源](https://support.apple.com/en-us/121115)）；**国行设备不可用** ✓（见 06） |
-| **PrivateCloudComputeLanguageModel**（iOS 27+ ✓） | 走 Apple 私有云的服务器模型，32K 上下文 ✓ | Apple SDK | ★★★★☆ | 隐私友好的"中间档"；三档推理；每用户每日限额（iCloud+ 用户更高）；须加入小企业计划、首次下载合计少于 200 万并申请 entitlement（[源](https://developer.apple.com/private-cloud-compute/)、[文档](https://developer.apple.com/documentation/foundationmodels/adding-server-side-intelligence-with-private-cloud-compute)） |
-| **LanguageModel 协议**（iOS 27+ ✓） | 把第三方模型桥接进同一套 Session API | Apple SDK | ★★★★☆ | 端侧 / PCC / 自有云模型共用一套代码；Anthropic `ClaudeForFoundationModels`（Apache-2.0，beta）（[源](https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models)）与 Google `GeminiLanguageModel`（Firebase AI Logic，Preview）（[源](https://firebase.google.com/docs/ai-logic/apple-foundation-models-framework/get-started)）已发布；Apple 开源 `CoreAILanguageModel`、`MLXLanguageModel` 跑本地模型（[源](https://developer.apple.com/videos/play/wwdc2026/241/)） |
+| **Foundation Models**（iOS 26+） | 端侧 LLM：引导生成、工具调用、流式 | Apple SDK | ★★★★★ | 零成本做追问、改写、分类；每会话上下文 4,096 token（中文约一字一 token）✓（[源](https://developer.apple.com/documentation/foundationmodels/managing-the-context-window)）；`contextSize` 可运行时读取（iOS 26.4 加入并回溯部署到 26.0）（[源](https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel/contextsize)），`tokenCount(for:)` 则需 iOS 26.4+（[源](https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel/tokencount(for:))）（2026-09-26 终稿核查更正：原记两者都回溯部署）；支持语言即 Apple Intelligence 语言，**含简体、繁体中文** ✓（[源](https://support.apple.com/en-us/121115)）；**国行设备不可用** ✓（见 06） |
+| **PrivateCloudComputeLanguageModel**（iOS 27+ ✓） | 走 Apple 私有云的服务器模型，32K 上下文 ✓ | Apple SDK | ★★★★☆ | 隐私友好的"中间档"；三档推理；每用户每日限额（iCloud+ 用户更高）；须加入小企业计划、首次下载少于 200 万并申请 entitlement（原文"fewer than 2 million first-time app downloads from any of their apps"，后文又写"任一 App 超过 200 万"即须迁移，按单个 App 还是合计计算有歧义，规划时按合计从严处理（推断）；2026-09-26 终稿核查更正：原记"合计少于 200 万"）（[源](https://developer.apple.com/private-cloud-compute/)、[文档](https://developer.apple.com/documentation/foundationmodels/adding-server-side-intelligence-with-private-cloud-compute)） |
+| **LanguageModel 协议**（iOS 27+ ✓） | 把第三方模型桥接进同一套 Session API | Apple SDK | ★★★★☆ | 端侧 / PCC / 自有云模型共用一套代码；Anthropic `ClaudeForFoundationModels`（Apache-2.0，beta）（[源](https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models)）与 Google Firebase AI Logic 的 `geminiLanguageModel(name:)`（Preview）（[源](https://firebase.google.com/docs/ai-logic/apple-foundation-models-framework/get-started)）已发布（2026-09-26 终稿核查更正：原记类型名 `GeminiLanguageModel`，官方示例是工厂方法 `ai.geminiLanguageModel(name:)`）；Apple 开源 `CoreAILanguageModel`、`MLXLanguageModel` 跑本地模型（[源](https://developer.apple.com/videos/play/wwdc2026/241/)） |
 | 系统工具（iOS 27+） | `OCRTool`、`BarcodeReaderTool`（基于 Vision）、`SpotlightSearchTool`（端侧 RAG） | Apple SDK | ★★★★☆ | 拍照捕获 → OCR 进导图；Spotlight 检索可做"你以前也想过"；端侧模型用 `SpotlightSearchTool` 须配 `.focused()` 精简配置，否则工具定义本身就超出上下文（[源](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes)） |
 | MLX Swift | Apple Silicon 上跑本地小模型 | MIT ✓（[源](https://github.com/ml-explore/mlx-swift/blob/main/LICENSE)） | ★★★★☆ | 需要 increased-memory-limit entitlement；iOS 27 可经 `MLXLanguageModel` 接入 Foundation Models 会话 |
 | llama.cpp | GGUF 推理，支持语法约束 | MIT ✓（[源](https://github.com/ggml-org/llama.cpp/blob/master/LICENSE)） | ★★★☆☆ | 可选模型最多 |
@@ -152,7 +154,7 @@ FunASR 工具包代码本身是 MIT ✓，README 明确"预训练权重另行许
 | **NLContextualEmbedding / NLEmbedding**（Apple） | Apple SDK | 系统内置，资产按需下载（`requestAssets`）；NLContextualEmbedding 需 iOS 17+；官方文档明确"英文和中文等语言可能需要不同的模型"✓（[源](https://developer.apple.com/documentation/naturallanguage/nlcontextualembedding)）；`NLEmbedding.sentenceEmbedding(for:)` 文档未列支持语言，中文是否返回非空需真机确认；质量需评估 |
 | **Core Spotlight 语义索引 + `SpotlightSearchTool`**（iOS 27） | Apple SDK | 系统维护索引，模型可直接检索 App 内容做端侧 RAG（[源](https://developer.apple.com/videos/play/wwdc2026/246/)）；中文检索效果待测 |
 | **sqlite-vec** | MIT OR Apache-2.0 ✓ | 向量与业务数据同库；仍是 1.0 前版本（crates 0.1.10-alpha.4） |
-| VecturaKit / USearch | MIT ✓（[源](https://github.com/rryam/VecturaKit/blob/main/LICENSE)）/ Apache-2.0 ✓ | 数据量大时再用；VecturaKit 要求 iOS 18+，自带 `NLContextualEmbedder`、`MLXEmbedder` 和混合检索（[源](https://github.com/rryam/VecturaKit/blob/main/README.md)） |
+| VecturaKit / USearch | MIT ✓（[源](https://github.com/rryam/VecturaKit/blob/main/LICENSE)）/ Apache-2.0 ✓ | 数据量大时再用；VecturaKit 要求 iOS 18+，自带 `NLContextualEmbedder` 和混合检索（向量 + BM25），`MLXEmbedder` 在独立包 VecturaMLXKit（[源](https://github.com/rryam/VecturaKit/blob/main/README.md)）（2026-09-26 终稿核查更正：原记 `MLXEmbedder` 为自带） |
 | **mem0** | Apache-2.0 ✓ | 用 ADD / UPDATE / DELETE 维护长期记忆——记住用户反复出现的主题，让追问更个性化 |
 | LightRAG / GraphRAG | MIT ✓ | 实体-关系抽取与主题聚类的思路；放服务端或只借思路 |
 | Graphiti | Apache-2.0 ✓ | 时序知识图谱，建模"想法随时间变化" |
@@ -178,6 +180,6 @@ FunASR 工具包代码本身是 MIT ✓，README 明确"预训练权重另行许
 - Star 数（GitHub API 不可达，npms.io 数据过时，本轮无法更新）；OpenMind-iOS、swiftmind 等个人项目的许可；思源、Logseq、AppFlowy、Trilium 的许可本轮未复核（业内公认 AGPL）。
 - simple-mind-map 付费去除版权声明的价格与合同形式（README 只给了作者微信）。
 - SenseVoiceSmall 的许可口径：HF 指向 FunASR 模型协议，ModelScope 元数据标 Apache-2.0——若要用，建议向 FunASR 团队书面确认。
-- SpeechTranscriber / DictationTranscriber 的中文支持与字错率：Apple 文档未列 locale，目前只有第三方实测，需真机调用 `supportedLocales` 并跑 CER。
+- SpeechTranscriber / DictationTranscriber 的中文支持与字错率：Apple 文档未列 locale，目前只有第三方文章（LoroNote 列出中文细分 locale），需真机调用 `supportedLocales` 并跑 CER。
 - `NLEmbedding.sentenceEmbedding(for: .simplifiedChinese)` 是否可用；Core Spotlight 语义检索的中文效果。
 - Qwen3-ASR、FluidAudio 中文模型在 iPhone 上的实时率、内存和下载体积。

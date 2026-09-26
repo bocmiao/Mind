@@ -10,7 +10,7 @@
 
 ## 0. 六条结论
 
-1. **AI 导图已经同质化，而且被做成了免费功能。** 主流做法是"外部内容（PDF/网页/YouTube/录音）→ 一键出导图 → 对话修改 → 转幻灯片"，代表是 Mapify、GitMind、EdrawMind、Xmind AI。Google NotebookLM 在 2025 年把"资料 → 可交互导图"做成免费功能，还上了 iOS；2026-07-16 更名 Gemini Notebook，并与 Gemini App 双向同步（[Google](https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/)）。
+1. **AI 导图已经同质化，而且被做成了免费功能。** 主流做法是"外部内容（PDF/网页/YouTube/录音）→ 一键出导图 → 对话修改 → 转幻灯片"，代表是 Mapify、GitMind、EdrawMind、Xmind AI。Google NotebookLM 在 2025 年把"资料 → 可交互导图"做成免费功能，还上了 iOS；2026-07-16 更名 Gemini Notebook；更名时已可在 Gemini App 内创建笔记本并双向同步（Google 博客称"already"，未说从何时开始），同时新增可写代码的云端电脑（[Google](https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/)；2026-09-26 终稿核查更正措辞，原写"更名并与 Gemini App 双向同步"）。
 2. **没有产品把"理清自己脑子里的乱麻"做成闭环。** "随口说 → 追问澄清 → 收拢 → 说得出口 → 练习"这条链没人串起来。现有 AI 大多在做**扩展/发散**，对想法本来就太多的人反而添乱。
 3. **"iOS 原生导图 + AI"已经有人做了，空着的是"原生 + 以说话为入口 + 追问收拢"。** 原记"MindNode（$24.99/年）没查到生成式 AI"，2026-09 核实更正：MindNode 2025-09 起用端侧 Apple Intelligence 做 AI 头脑风暴和"导图转文稿"，2026-09 又接入 MCP；Xmind 2026-09 起支持 Siri 建图，图片转导图改走端侧 Apple Intelligence（见 §2.3、§2.4）。iThoughts 的开发商 2024-01 停业；Mapify 的 iOS 端 2025-12 后没再更新，Gemini Notebook 的 iOS 端用来看资料摘要，都不是随手倾倒想法的地方。
 4. **只有 Ayoa 明确服务神经多样性人群**（ADHD、读写障碍等），但它是 Web 优先的重型套件。
@@ -139,6 +139,8 @@
 ### 1.3 2025–26 新进入者
 
 > 来源：本轮 App Store 美区关键词扫描（thinking partner、brain dump、talk to think、overthinking、voice journal 等）+ 逐个查 App 描述，2026-09-26；产品名链接到 App Store。"问/理/说"一列：**问**＝主动追问，**理**＝产出结构（导图、卡片、框架），**说**＝面向表达的成稿或练习；✓ 做了、△ 部分、✗ 没做，均据 App 描述判断。
+>
+> 口径（2026-09-26 终稿核查补注）：表中共 25 行，A、C 两组 14 款都是 2025-07 以后上架；B 组"已有一定用户量"的 10 款和参照 Mindway 里有 8 款是 2025 年以前上架（ideaShell 2024-05、Cleft 2024-08、Voicepal 2023-12、SpeakApp 2024-01、Mindclear 2023-10、Flownote 2024-05、VisualMind 2024-06、Mindway 2024-01），所以严格说 2025–26 年上架的是 17 款，标题沿用"新进入者"只为保留锚点链接。
 
 | 产品（美区上架） | 一句话定位（据 App 描述） | 美区评分 | 价格（内购） | 问/理/说 |
 |---|---|---|---|---|
@@ -243,7 +245,7 @@ Napkin 注册用户超 500 万，说明"让别人看懂"是强需求；AudioPen�
 3. **长期记忆很贵。** Rosebud 称新记忆系统"运行所需资源大得多"，2026-09-30 起**直接取消免费版**，老用户在 App 内拿专属优惠、条目可随时导出（[公告](https://help.rosebud.app/account/changes-to-the-free-plan)）。原记"改为按'每周 AI 预算'计量"，公告里没有这个说法，2026-09 更正；现行付费档是 Bloom $12.99/月或 $107.99/年，另有按用量倍数的 Thrive 2x（$24.99/月）、5x（$59.99/月）（[App Store](https://apps.apple.com/us/app/rosebud-ai-journal-diary/id6451135127)）。Mindsera 2026-04 也"重建了记忆系统"（[App Store](https://apps.apple.com/us/app/mindsera-ai-journal-diary/id6742319153)）。
 4. **独立可穿戴设备的终点往往是被收购或停服。** Meta 2025-12 收购 Limitless 后停售 Pendant，欧盟、英国等地停服（[MLQ](https://mlq.ai/news/meta-acquires-ai-wearables-startup-limitless-ending-sales-of-pendant-device/)）；Bee 被 Amazon 收购。启示：用 Apple Watch、操作按钮、锁屏小组件充当"准硬件"入口，并承诺数据可导出。
 5. **避免"AI 替你想"的主流做法：问题优先、原话优先、成品归用户。** Rosebud"帮你找到自己的答案，而不是给建议"；Day One 把对话转成"你的日记"；Tiimo"结构应该支撑你的思考，而不是取代它"。
-6. **带记忆的 AI 更容易顺着用户说。** 这是两项研究：Jain 等（CHI 2026）发现，加入用户记忆档案后多数被测模型的附和倾向上升（[DOI](https://doi.org/10.1145/3772318.3791915)）；Cheng 等（*Science* 2026）发现，在人际冲突场景里，爱附和的 AI 让用户更喜欢它，却更不愿意承担责任、修复关系（[DOI](https://doi.org/10.1126/science.aec8352)）。两篇的综述见 [Scholarly Kitchen](https://scholarlykitchen.sspnet.org/2026/09/02/when-your-ai-knows-you-too-well-personalization-sycophancy-and-the-risk-of-an-intellectual-echo-chamber-in-ai-assisted-research/)；细节见 [03 §4](03-user-insights.md)。**产品越"懂你"，越需要内置反方视角。**
+6. **带记忆的 AI 更容易顺着用户说。** 这是两项研究：Jain 等（CHI 2026）发现，有用户上下文时附和倾向往往上升（因模型和上下文类型而异），用户记忆档案带来的增幅最大，如 Gemini 2.5 Pro +45%（[DOI](https://doi.org/10.1145/3772318.3791915)、[arXiv 摘要](https://arxiv.org/abs/2509.12517)；2026-09-26 终稿核查更正：原写"多数被测模型的附和倾向上升"，摘要无"多数"之说）；Cheng 等（*Science* 2026）发现，在人际冲突场景里，爱附和的 AI 让用户更喜欢它，却更不愿意承担责任、修复关系（[DOI](https://doi.org/10.1126/science.aec8352)）。两篇的综述见 [Scholarly Kitchen](https://scholarlykitchen.sspnet.org/2026/09/02/when-your-ai-knows-you-too-well-personalization-sycophancy-and-the-risk-of-an-intellectual-echo-chamber-in-ai-assisted-research/)；细节见 [03 §4](03-user-insights.md)。**产品越"懂你"，越需要内置反方视角。**
 7. **单独做"实时演讲纠错"很难活。** Poised 官网公告 2026-10-08 关停（[官网](https://poised.com/)）；Yoodli 靠企业角色扮演培训做到 B 轮。表达训练应嵌进"先理清 → 排练 → 成稿"的流程，而不是做成独立课程。
 8. **ADHD 工具的关键是"一个控件 + 一个下一步"。** Goblin Tools 用"辣度滑杆"控制任务拆多细；Tiimo 凭温和、可视化的规划拿下 **Apple 2025 年度 iPhone App**（App Store 页面奖项栏可见，[App Store](https://apps.apple.com/us/app/tiimo-to-do-list-planner/id1480220328)）。
 

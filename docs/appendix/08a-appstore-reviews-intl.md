@@ -141,7 +141,7 @@
 - **Q28**「When I uploaded my personal reflections about health and diet, the AI voices in a mocking , joking tone, completely misrepresenting my sincere experience.」——Gemini Notebook (NotebookLM) · 1★ · gb · 2025-11-12（[源](https://apps.apple.com/gb/app/id6737527615?see-all=reviews)）
   意译：我上传关于健康饮食的个人反思，AI 声音用嘲弄玩笑的语气，完全歪曲了我真诚的经历。
 
-**对我们的启示**：这组评论直接印证了 docs/03 原则 #6（默认保留原话）、反模式 #8，以及 L「原话/AI 分色」（P0）、C「原话溯源」（P1）、D「你的口吻」（P1）和 docs/04 §5.2"不换用户的词"。补充三条细则：列表和首页标题用用户原话，不用 AI 摘要（Q26）；提供"整理强度"滑杆（Q25）；情绪类内容禁用戏谑语气（Q28）。
+**对我们的启示**：这组评论直接印证了 docs/03 原则 #6（默认保留原话）、反模式 #8，以及 L「原话/AI 分色」（P0）、C「原话溯源」（P1；现已升为 P0，见 [08 §4](../08-user-voices.md)）、D「你的口吻」（P1）和 docs/04 §5.2"不换用户的词"。补充三条细则：列表和首页标题用用户原话，不用 AI 摘要（Q26）；提供"整理强度"滑杆（Q25）；情绪类内容禁用戏谑语气（Q28）。
 
 ### 2.7 P5 AI 过度、被硬塞 AI
 
