@@ -130,9 +130,100 @@ Napkin 注册用户超 500 万，说明"让别人看懂"是强需求；AudioPen�
 
 ## 3. 相邻品类：可以借鉴的交互
 
-> 这一节由"相邻品类"调研补充：语音捕捉、AI 日记、第二大脑、ADHD 工具、表达训练、论证与决策工具。
+> 覆盖语音捕捉、AI 日记、第二大脑、ADHD 工具、表达训练、论证与决策工具。部分第三方评测由竞品自写（如 mylifenote.ai、spokenly.app），有立场偏差。
 
-（见下文，调研结果合并后补齐）
+### 3.0 八条结论
+
+1. **"乱说 → 润色成文"已经商品化，"录音 → 自动导图"也成了标配。** 有评测的标题就叫"测了 15 款 AI 笔记，11 款是同一个工具"（[Medium](https://mrsproductivity.medium.com/i-tested-15-ai-note-taking-apps-2026-11-are-the-same-tool-92e79a0e2990)）。差异化只能来自完整闭环：**追问 → 结构 → 表达 → 行动 → 旧想法再浮现**。
+2. **钱主要流向"系统级语音输入"和"会议/职业场景"。**
+   - Wispr Flow：2026-08 完成 B 轮 $280M，估值 $2B（[TechCrunch](https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/)）；
+   - Granola：2026-03 完成 C 轮 $125M，估值 $1.5B（[SiliconANGLE](https://siliconangle.com/2026/03/25/granola-raises-125m-1-5b-valuation-ai-note-taking-app/)）；
+   - Plaud：2026-06 软件 ARR 破 $1 亿，设备出货超 200 万台（[TechCrunch](https://techcrunch.com/2026/06/16/plaud-says-its-software-business-topped-100m-in-arr-after-shipping-over-2m-ai-notetakers/)）。
+   - 个人思考类大多是独立开发者的小生意（AudioPen 约 $15K MRR），或只到种子轮（Rosebud $6M）。
+3. **长期记忆很贵。** Rosebud 因记忆系统运行成本太高，2026-09-30 取消免费版，改为按"每周 AI 预算"计量（[公告](https://help.rosebud.app/account/changes-to-the-free-plan)）。
+4. **独立可穿戴设备的终点往往是被收购或停服。** Limitless 被 Meta 收购后停售、部分地区停服；Bee 被 Amazon 收购。启示：用 Apple Watch、操作按钮、锁屏小组件充当"准硬件"入口，并承诺数据可导出。
+5. **避免"AI 替你想"的主流做法：问题优先、原话优先、成品归用户。** Rosebud"帮你找到自己的答案，而不是给建议"；Day One 把对话转成"你的日记"；Tiimo"结构应该支撑你的思考，而不是取代它"。
+6. **带记忆的 AI 更容易顺着用户说。** 一项 CHI 2026 研究发现，加入用户记忆档案后多数被测模型的附和倾向上升；在人际冲突场景里，爱附和的 AI 让用户更喜欢它，却更不愿意承担责任、修复关系（[Scholarly Kitchen 综述](https://scholarlykitchen.sspnet.org/2026/09/02/when-your-ai-knows-you-too-well-personalization-sycophancy-and-the-risk-of-an-intellectual-echo-chamber-in-ai-assisted-research/)）。**产品越"懂你"，越需要内置反方视角。**
+7. **单独做"实时演讲纠错"很难活。** Poised 已宣布关停（[官网](https://poised.com/)）；Yoodli 靠企业角色扮演培训做到 B 轮。表达训练应嵌进"先理清 → 排练 → 成稿"的流程，而不是做成独立课程。
+8. **ADHD 工具的关键是"一个控件 + 一个下一步"。** Goblin Tools 用"辣度滑杆"控制任务拆多细；Tiimo 凭温和、可视化的规划拿下 **Apple 2025 年度 iPhone App**。
+
+### 3.1 语音捕捉与 AI 重组
+
+| 产品 | 怎么处理"乱说一通" | 价格 | 信号 |
+|---|---|---|---|
+| **AudioPen** | 删口水话，再按"风格"重写（清晰简洁、正式邮件、备忘录、要点、讲给孩子……），可学你的文风（[官网](https://www.audiopen.ai/)） | Prime 买断式：1 年 $99（三方） | 独立开发者半天做出来，前 2 个月收入 $73K，之后约 $15K MRR（[IndieHackers](https://www.indiehackers.com/post/louis-pereira-s-journey-from-idea-to-15k-month-with-audiopen-eda6e4c6e4)） |
+| **Voicenotes** | 一条录音转成摘要/待办/博客草稿；"Ask My AI"对全部历史提问；提供 MCP server | Pro $14.99/月（三方） | 2026-04 主动下线会议机器人（[Release notes](https://help.voicenotes.com/en/articles/9220745-release-notes)）——**个人思考工具别被会议功能拖离核心** |
+| **Cleft Notes** | "给靠说来想事的人"；手机本地 Whisper 转写，音频不离设备；写入 Obsidian | Plus $39.99/年（[定价](https://cleftnotes.com/pricing)） | The Sweet Setup："我不知道自己需要的思考伙伴" |
+| **Whisper Memos** | 锁屏、表盘、Siri、操作按钮一键开录；自动分段、摘要、发邮箱 | 待核实 | 系统入口吃满的样板 |
+| **Superwhisper** | 系统级听写，按当前 App 自动切换"模式"（邮件/消息/笔记） | 约 $84.99/年或买断（三方） | 无外部融资 |
+| **Letterly / TalkNotes / Oasis** | 录音 → 几十种格式改写 | 买断或订阅 | 同质化严重 |
+| **Plaud** | 转写 → 摘要 → **根据摘要生成导图**；"360° View"同一段对话按不同读者出不同视图；Ask Plaud 回答带出处、可点回原音频（[发布](https://www.plaud.ai/blogs/news/plaud-intelligence-3-0-launch)） | 硬件 + 订阅 | 见上 |
+| **Granola** | 开会时只记几个关键词，会后 AI 结合转写把笔记补全 | 订阅 | 见上 |
+| **Limitless / Bee** | 全天被动录音 → 摘要、待办、情绪洞察 | — | 分别被 Meta、Amazon 收购；全天监听让人不适（[TechCrunch](https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out/)） |
+
+**处理"乱说"的五种深度**：① 清洗（去口水话、分段、加标题）→ ② 换风格（AudioPen 横向切换同一段话的多个版本）→ ③ 一条录音拆出摘要、待办、草稿 → ④ 结构化（导图、模板字段）→ ⑤ 跨笔记对话（答案带出处、可回听）。
+
+**空位**：语音笔记类产品几乎都**不会在录音后主动追问**。追问集中在日记类产品和 Tana、Day One 的语音对话模式里。"录音 → 导图 → 针对薄弱分支追问"这条路还没人占。
+
+### 3.2 AI 日记与思考伙伴
+
+| 产品 | 核心对话技巧 | 价格 |
+|---|---|---|
+| **Rosebud** | "Dig Deeper"两档：Focused 一次给 3 个问题；Interactive **先说一句观察，再问一个尖锐问题**。问题基于 CBT/ACT，有治疗师参与设计（[帮助](https://help.rosebud.app/tools-for-growth/dig-deeper)）；2025-06 种子轮 $6M，用户 15 万+ | $107.99/年 |
+| **Mindsera** | 50+ 思维模型（CBT、斯多葛、第一性原理等），边写边给反馈，导师人格（[官网](https://mindsera.com/)） | $129/年（三方） |
+| **Day One Gold**（2026-04） | **Daily Chat**：先聊完这一天，再转成保留你原话和心情的日记；**Go Deeper** 追问可在 Apple Intelligence 本地运行（[9to5Mac](https://9to5mac.com/2026/04/08/day-one-journaling-app-introduces-gold-plan-with-ai-summaries-and-daily-chat/)） | $74.99/年 |
+| **Untold** | 语音优先，每条都生成追问，随时间显示反复出现的主题；加密、默认不训练 | 待核实 |
+| **How We Feel** | 耶鲁情绪智力中心出品，**四色情绪矩阵 + 144 个情绪词**帮你准确说出感受；免费（非营利） | 免费 |
+| **Stoic / Reflection / Life Note** | 早晚节奏、"治疗前准备"模板、"问你的日记"、导师人格 | $48–70/年不等 |
+
+**可以直接拿来用的对话原则**：只问不答 · 一次只问一个 · 先复述再追问 · 对话只是过程，成品归用户 · 框架只当脚手架 · 换个视角再问一遍 · 看长期规律 · 本地处理与加密。
+
+**行业信号**：价格锚每月 $6–15、每年 $75–130；2025–26 年**语音对话/通话模式已成标配**；免费 AI 撑不住长期记忆。
+
+### 3.3 AI 第二大脑（PKM）
+
+| 产品 | 值得借鉴 |
+|---|---|
+| **Obsidian + Smart Connections** | 你写东西时，侧栏**自动列出意思相近的旧笔记**——旧想法自己冒出来，不用记得去搜 |
+| **Reflect** | AI 自动补反向链接，用户只需确认 |
+| **Mem 2.0** | 散步时的碎碎念自动整理成笔记；凭"那次和某人开的会"这种模糊描述就能找回 |
+| **Tana** | "超级标签"绑定 AI 指令：一句"周五前复核预算，高优先级"直接变成字段齐全的任务节点（[文档](https://tana.inc/docs/mobile-voice-memos)）；但上手难 |
+| **Heptabase** | AI 的回答可以**直接拖到白板上**，而不是淹没在聊天记录里 |
+| **Capacities** | **可以按空间整体关掉 AI**，让担心被 AI 替代的用户放心 |
+
+**教训**：PKM 工具都要求用户先搭一套体系，而我们的用户恰恰"不知道怎么整理"——所以类型、标签、链接应该**默认由 AI 生成，用户只负责确认**。
+
+### 3.4 ADHD / 神经多样性工具
+
+- **Goblin Tools**：一组各管一件事的小工具——Magic ToDo（"辣度"滑杆决定拆多细）、Compiler（把脑内倾倒变成行动清单）、Formalizer（调语气）、**Judge（判断一条消息的语气和意图——"这样说会不会太冲？"）**、Consultant（比较选项）（[官网](https://goblin.tools/)）。网页版免费，靠 TikTok 和 Reddit 口碑走红。
+- **Tiimo**：打字或直接说出所有事，AI 拆成带预估时长的步骤放进可视化时间轴。Apple 2025 年度 iPhone App，用户 100 万+（[产品页](https://www.tiimoapp.com/product/ai-planning)）。
+- **ADHD Notes 等**：把一团乱分进"现在做 / 以后做 / 放下"三个筐，每个筐只给一个下一步。
+
+**交互原则**：一个控件调粒度 · 整理交给 AI，用户只勾选拖动 · 只给一个下一步 · 允许"放下" · 让时间看得见 · 输入前不要让用户选分类。**Apple 编辑偏爱温和、低压力、可视化的设计——这是可以争取的推荐渠道。**
+
+### 3.5 表达训练
+
+| 产品 | 交互 | 信号 |
+|---|---|---|
+| **Yoodli** | 自己录，或和 AI 角色对练（AI 扮演客户或面试官，会反驳和追问）；反馈内容、结构、简洁度、口头禅、语速 | 2025-12 B 轮 $40M，估值 $300M+，重心在企业培训（[官方](https://yoodli.ai/blog/yoodli-raises-40-million-series-b-to-lead-the-future-of-experiential-learning)） |
+| **Orai** | 练完给成绩单：口头禅、语速、清晰度、能量 | $39.99/年，自称用户 45 万+ |
+| **Speeko** | 1000+ 练习、每日热身、AI 对话演练 | 上过 App of the Day |
+| **Poised** | 开会时实时反馈口头禅 | **已宣布关停** |
+| **Oompf 等** | 每天一道低压力小题，推荐 PREP 结构 | 新进入者 |
+
+**教训**：面向个人的客单价低，做大的都靠企业客户。**表达训练应该是"导图 → 排练"的自然下一步，而不是独立功能。**
+
+### 3.6 论证与决策
+
+- **Kialo**：支持/反对论证树，可切换树形图和旭日图；没有 AI，内容全靠手录——AI 可以把一段口头争论自动拆成正反两棵树。
+- **Clearer Thinking 的 Decision Advisor**：先引导你**多想几个备选**，再逐一评估，顺带讲认知偏差；做过随机对照试验（[试验](https://www.clearerthinking.org/post/decision-advisor-a-randomized-controlled-trial-of-a-decision-making-tool)）。
+- **决策日志**（Farnam Street 模板）：记下决定、预期、信心程度、放弃的选项、当时的情绪，几周后对照。
+- **事前验尸**（Gary Klein）：先假设计划已失败，再倒推原因。Psychology Today 提醒全交给 AI 会失去自己动脑的好处（[文章](https://www.psychologytoday.com/us/blog/seeing-what-others-dont/202504/can-ai-do-pre-mortems-for-us)）——所以**用户先写，AI 再补**。
+- **教训**：这类工具很难单独赚钱，但它们定义好了一套关系（支持、反对、风险、备选、信心），正好可以做成导图的高级视图。
+
+### 3.7 相邻品类给的 MVP 启示
+
+相邻品类调研建议的最小闭环：**一键倾倒 → 乱说成图 → 复述确认 → 再挖一层 → 一图多写 → 原话/AI 分色 → 节点回听 → 旧想法回声**。这 8 个点串起来，就不会被当成"又一个会画导图的改写工具"。完整的 30 条功能点子已合并进 [04-产品构思](04-product-concept.md)。
 
 ---
 
