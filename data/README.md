@@ -5,6 +5,7 @@
 | 文件 | 内容 | 来源与方法 |
 |---|---|---|
 | `appstore-snapshot-2026-09-26.csv` | 118 条店面记录（美区 65、国区 53；Xmind、MindNode、Freeform/无边记、Day One 两区都收，共 114 个不同 App）的评分、评分条数、星级分布（5→1 星）、版本、最近更新、首次上架、最低系统、App 内购买价格表 | 评分与版本来自 [iTunes Lookup API](https://itunes.apple.com/lookup?id=1286983622&country=us)；星级分布和内购价格来自 App Store 网页（`https://apps.apple.com/<店面>/app/id<ID>`）里嵌的数据 |
+| `aso-keywords-asia-2026-09-26.csv` | 首发店面补充：台区 18 个、港区 12 个、新加坡 9 个、马来西亚 7 个关键词（繁体、简体、英文）的同样指标 | 同上 |
 | `aso-keywords-2026-09-26.csv` | 50 个关键词（国区中文 30 个、美区英文 20 个）的竞争强度：前 10 名的评分条数中位数、其中评分不到 1,000 条的数量、2025–26 年新上架的数量，以及前 3 名及其评分条数 | [iTunes Search API](https://itunes.apple.com/search?term=brain%20dump&country=us&entity=software) 前 10 个结果 |
 
 **注意**
